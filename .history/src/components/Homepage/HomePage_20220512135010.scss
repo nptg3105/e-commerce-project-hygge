@@ -1,0 +1,296 @@
+@import 'styles/_index.scss';
+.main {
+	font-family: 'Montserrat', sans-serif;
+
+	.section-hero {
+		margin-bottom: rem(112);
+		.hero {
+			&__banner {
+				display: flex;
+				// width: 100%;
+				align-items: center;
+				justify-content: space-around;
+				background-color: var(--color-light-grey);
+				padding: rem(50);
+				border-radius: rem(50);
+			}
+
+			&__details {
+				max-width: rem(370);
+			}
+
+			&__image {
+				img {
+					max-width: 100%;
+					max-height: 100%;
+					object-fit: cover;
+				}
+			}
+
+			&__title {
+				font-size: rem(40);
+				margin-bottom: rem(40);
+				font-weight: 700;
+			}
+
+			.btn {
+				text-align: center;
+			}
+		}
+	}
+
+	.category {
+		margin-bottom: rem(112);
+
+		&__item {
+			background-color: var(--color-light-grey);
+			display: inline-block;
+			border-radius: rem(20);
+			width: 100%;
+			height: rem(120);
+			position: relative;
+		}
+
+		&__box {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&__icon {
+			margin-bottom: rem(15);
+			display: block;
+		}
+
+		&__img {
+			display: block;
+			margin: 0 auto;
+		}
+
+		&__name {
+			text-align: center;
+			font-size: 14px;
+			font-weight: 500;
+		}
+	}
+
+	.section-product-newest {
+		margin-bottom: rem(112);
+
+		.heading-primary {
+			margin-bottom: 0;
+		}
+
+		.product-newest {
+			&__btn {
+				text-align: center;
+				margin-top: rem(60);
+			}
+
+			.btn-product {
+				width: rem(200);
+			}
+		}
+	}
+
+	.section-about {
+		margin-bottom: rem(112);
+		.about {
+			&__sub,
+			&__heading {
+				text-align: center;
+			}
+
+			&__content {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				text-align: center;
+			}
+
+			&__icon {
+				margin-bottom: rem(32);
+				background-color: var(--color-light-grey);
+				display: inline-block;
+				padding: rem(16) rem(20);
+				border-radius: 50px;
+			}
+
+			&__title {
+				font-size: rem(24);
+				margin-bottom: rem(16);
+			}
+
+			&__desc {
+				font-size: rem(20);
+			}
+		}
+	}
+
+	.section-review {
+		margin-bottom: rem(112);
+		.review {
+			&__banner {
+				background-color: var(--color-light-grey);
+				padding: rem(50);
+				border-radius: rem(50);
+				display: flex;
+				align-items: center;
+			}
+
+			&__details {
+				width: 50%;
+			}
+
+			&__text {
+				width: 50%;
+			}
+
+			&__title {
+				font-size: rem(40);
+				margin-bottom: rem(40);
+				font-weight: 700;
+			}
+
+			&__box {
+				padding: rem(20);
+			}
+
+			&__img {
+				margin-bottom: rem(32);
+				outline: var(--color-primary) solid 2px;
+				outline-offset: 8px;
+				display: inline-block;
+				border-radius: 50%;
+				overflow: hidden;
+				img {
+					object-fit: cover;
+					width: rem(60);
+					height: rem(60);
+				}
+			}
+
+			&__name {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+
+	.section-blog {
+		margin-bottom: rem(112);
+
+		.blog {
+			&__box {
+				display: flex;
+				flex-wrap: wrap;
+				gap: rem(20);
+			}
+
+			&__item {
+				// margin: rem(64) rem(28) 0;
+
+				&--1 {
+					flex: 0 0 calc(66.666% - 20px);
+					width: calc(66.666% - 20px);
+				}
+
+				&--2 {
+					flex: 0 0 calc(33.333% - 20px);
+					width: calc(33.333% - 20px);
+				}
+
+				&--3 {
+					flex: 0 0 calc(33.333% - 20px);
+					width: calc(33.333% - 20px);
+				}
+
+				&--4 {
+					flex: 0 0 calc(33.333% - 20px);
+					width: calc(33.333% - 20px);
+				}
+
+				&--5 {
+					flex: 0 0 calc(33.333% - 20px);
+					width: calc(33.333% - 20px);
+				}
+
+				&--6 {
+					flex: 0 0 calc(50% - 20px);
+					width: calc(50% - 20px);
+				}
+
+				&--7 {
+					flex: 0 0 calc(50% - 20px);
+					width: calc(50% - 20px);
+				}
+			}
+
+			&__photo {
+				overflow: hidden;
+				margin-bottom: rem(32);
+				object-fit: cover;
+			}
+
+			&__img {
+				border-radius: rem(50);
+				width: 100%;
+				height: 100%;
+			}
+
+			&__title {
+				font-size: rem(28);
+				margin-bottom: rem(16);
+			}
+
+			&__label {
+				text-transform: uppercase;
+				font-size: rem(16);
+				font-weight: 700;
+				padding: rem(12) rem(20);
+				position: relative;
+
+				&:after {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: currentColor;
+					border-radius: rem(20);
+					opacity: 0.2;
+				}
+
+				&--orange {
+					color: var(--color-orange);
+				}
+
+				&--blue {
+					color: var(--color-blue);
+				}
+
+				&--pink {
+					color: var(--color-pink);
+				}
+
+				&--green {
+					color: var(--color-green);
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $sm-min) {
+	.about {
+		&__content {
+			flex-direction: column;
+		}
+
+		&__icon {
+			margin-bottom: unset;
+		}
+	}
+}

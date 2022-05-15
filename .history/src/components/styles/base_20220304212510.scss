@@ -1,0 +1,83 @@
+@use 'variables' * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	// font-size: 62.5%;
+}
+
+body {
+	line-height: 1.5;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+
+	.has-scroll {
+		overflow: hidden;
+	}
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-black);
+}
+
+.pd-70 {
+	padding: 70px 0;
+}
+
+h2 {
+	font-weight: 500;
+}
+
+.container {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.container-fluid {
+	width: 100%;
+	padding-right: 30px;
+	padding-left: 30px;
+	margin-right: auto;
+	margin-left: auto;
+
+	@media (max-width: 767px) {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}
+
+@media (min-width: $xxs-min) {
+	.container {
+		max-width: 540px;
+	}
+}
+
+@media (min-width: $xs-min) {
+	.container {
+		max-width: 720px;
+	}
+}
+
+@media (min-width: $sm-min) {
+	.container {
+		max-width: 960px;
+	}
+}
+
+@media (min-width: $md-min) {
+	.container {
+		max-width: $container-width;
+	}
+}

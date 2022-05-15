@@ -1,0 +1,10 @@
+@import 'styles/_index.scss';
+
+.related {
+	display: flex;
+
+	&__img {
+		width: rem(200);
+		height: rem(300);
+	}
+}

@@ -1,0 +1,9 @@
+@import 'styles/_index.scss';
+
+.cart {
+	&__head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}

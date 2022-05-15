@@ -1,0 +1,15 @@
+@use '../globals';
+
+@mixin flexbox($align: flex-start, $justify: flex-start, $direction: row, $wrap: nowrap) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+
+}
+
+@mixin size($width, $height:$width) {
+    width: $width;
+    height: $height;
+}

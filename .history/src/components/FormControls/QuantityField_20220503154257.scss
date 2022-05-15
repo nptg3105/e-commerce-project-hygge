@@ -1,0 +1,27 @@
+@import 'styles/_index.scss';
+
+.product-detail {
+	&__form {
+		display: flex;
+		margin: 0;
+	}
+
+	&__number {
+		display: flex;
+		border-radius: rem(50);
+		border: 2px solid var(--color-light-grey);
+		padding: rem(16);
+		justify-content: space-around;
+	}
+
+	&__change {
+		border: none;
+		cursor: pointer;
+		height: 100%;
+		line-height: 100%;
+	}
+
+	&__input {
+		border: none;
+	}
+}

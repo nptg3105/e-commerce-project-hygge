@@ -1,0 +1,117 @@
+@import 'styles/_index.scss';
+.login {
+	font-family: 'Montserrat', sans-serif;
+
+	&__text {
+		color: var(--color-blue);
+		font-weight: 500;
+		margin-bottom: rem(20);
+	}
+
+	&__form {
+		max-width: rem(496);
+		margin: 0 auto;
+		position: relative;
+		padding-bottom: rem(40);
+		font-size: rem(16);
+	}
+
+	&__create {
+		font-size: rem(40);
+		margin-bottom: rem(64);
+	}
+	.breadcum {
+		font-size: rem(20);
+		margin-bottom: rem(40);
+		&__item {
+			display: inline;
+			align-items: center;
+			margin-right: rem(20);
+			a {
+				margin-right: rem(20);
+			}
+		}
+	}
+
+	.form-label {
+		display: block;
+		margin-bottom: rem(8);
+	}
+
+	.form-input {
+		display: block;
+		width: 100%;
+		padding: rem(20);
+		border-radius: rem(30);
+		border: rem(3) solid var(--color-light-grey);
+		outline: none;
+		margin-bottom: rem(16);
+	}
+
+	.form-remember {
+		display: block;
+		position: relative;
+		font-size: rem(20);
+		padding-left: rem(45);
+		margin: rem(30) 0;
+		cursor: pointer;
+
+		input {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			height: 0;
+			width: 0;
+		}
+		.checkmark {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			height: rem(32);
+			width: rem(32);
+			background-color: var(--color-white);
+			border-radius: 50%;
+			transform: translateY(-50%);
+			border: solid rem(2) var(--color-light-grey);
+			transition: all 0.3s ease;
+		}
+
+		&:hover input ~ .checkmark {
+			border: solid rem(2) var(--color-primary);
+		}
+		input:checked ~ .checkmark {
+			border: solid rem(8) var(--color-primary);
+			transition: all 0.3s ease;
+		}
+	}
+
+	input[type='email']:focus,
+	input[type='password']:focus {
+		border: rem(3) solid var(--color-primary);
+		transition: all 0.3s ease;
+	}
+
+	.form-btn {
+		display: block;
+	}
+
+	.btn {
+		font-size: rem(20);
+		padding: rem(16);
+		border: 1px solid var(--color-light-grey);
+		border-radius: 50px;
+		text-decoration: none;
+		color: var(--color-black);
+		width: 100%;
+		display: block;
+		font-weight: bold;
+		&--primary {
+			background-color: var(--color-primary);
+			color: var(--color-white);
+		}
+		&--secondary:hover {
+			border: 1px solid var(--color-black);
+			transition: all 0.3s ease;
+		}
+	}
+}

@@ -1,0 +1,71 @@
+@import 'styles/_index.scss';
+
+.section-newsletter {
+	margin-bottom: 112px;
+	margin-top: rem(80);
+
+	.newsletter {
+		background-color: var(--color-light-grey);
+		padding: rem(50);
+		border-radius: rem(50);
+
+		&__sub,
+		&__heading,
+		&__form {
+			text-align: center;
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		&__input {
+			display: inline-block;
+			padding: rem(20);
+			border-radius: rem(30);
+			border: rem(3) solid var(--color-light-grey);
+			outline: none;
+			margin-bottom: rem(16);
+			font-family: 'Montserrat', sans-serif;
+			width: 50%;
+			margin-right: rem(25);
+		}
+
+		&__btn {
+			font-family: 'Montserrat', sans-serif;
+			width: rem(200);
+			display: inline-block;
+		}
+	}
+}
+@media (max-width: $sm-min) {
+	.section-newsletter {
+		.newsletter {
+			&__heading {
+				font-size: rem(32);
+			}
+		}
+	}
+}
+
+@media (max-width: $xs-min) {
+	.section-newsletter {
+		.newsletter {
+			&__btn {
+				width: rem(150);
+			}
+		}
+	}
+}
+
+@media (max-width: $xxs-min) {
+	.main {
+		.section-newsletter {
+			.newsletter {
+				background-color: var(--color-white);
+				padding: 0;
+				&__form {
+					display: flex;
+					flex-direction: column;
+				}
+			}
+		}
+	}
+}

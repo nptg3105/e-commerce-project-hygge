@@ -1,0 +1,25 @@
+/* eslint-disable */
+import { useEffect, useState } from 'react'
+import productDetailApi from 'services/productDetailApi'
+
+const useProductDetail = productId => {
+	const [product, setProduct] = useState([])
+	const [loading, setLoading] = useState(true)
+
+	if (productId) {
+		useEffect(() => {
+			const getProductDetail = async productId => {
+				try {
+					const product = await productDetailApi.getproductDetailApi(productId)
+					setProduct(product)
+				} catch (err) {
+					console.log('Fail to fetch data', err)
+				}
+			}
+			getProductDetail(productId)
+		}, [productId])
+		return { productDetail, loading }
+	}
+}
+
+export default useProductDetail

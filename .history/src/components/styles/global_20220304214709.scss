@@ -1,0 +1,13 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.icon {
+	display: inline;
+	img {
+		width: rem(30);
+		height: rem(30);
+	}
+}

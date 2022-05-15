@@ -1,0 +1,42 @@
+@import 'styles/_index.scss';
+
+.product-detail {
+	&__form {
+		display: flex;
+		// justify-content: space-between;
+		align-items: center;
+		margin: 0;
+		gap: rem(50);
+	}
+
+	&__number {
+		display: flex;
+		border-radius: rem(50);
+		border: 2px solid var(--color-light-grey);
+		padding: rem(16);
+		justify-content: space-around;
+		// width: rem(50);
+	}
+
+	&__change {
+		border: none;
+		cursor: pointer;
+		height: 100%;
+		line-height: 100%;
+	}
+
+	&__error {
+		// colo
+	}
+}
+
+.form-quantity {
+	border: none;
+	width: auto;
+	text-align: center;
+	width: rem(50);
+}
+
+input:focus {
+	outline: none;
+}

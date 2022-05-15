@@ -1,0 +1,141 @@
+@import 'styles/_index.scss';
+
+.product-detail {
+	font-family: 'Montserrat', sans-serif;
+
+	&__infor {
+		display: flex;
+		gap: rem(100);
+		align-items: center;
+	}
+
+	&__photo {
+		width: 50%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: rem(50);
+		overflow: hidden;
+	}
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+	}
+
+	&__box {
+		width: 60%;
+	}
+
+	&__sale {
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(20);
+	}
+
+	&__category {
+		margin-right: rem(40);
+		color: var(--color-orange);
+		position: relative;
+		font-weight: 700;
+		padding: rem(15) rem(16);
+
+		&::before {
+			content: '';
+			position: absolute;
+			display: block;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background-color: currentColor;
+			opacity: 0.2;
+			border-radius: rem(50);
+		}
+	}
+
+	&__price {
+		display: flex;
+		align-items: center;
+
+		&--actual {
+			margin-right: rem(20);
+			font-size: rem(26);
+			font-weight: 700;
+		}
+
+		&--old {
+			text-decoration: line-through;
+			opacity: 0.8;
+		}
+	}
+
+	&__cart {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__number {
+		display: flex;
+		border-radius: rem(50);
+		border: 2px solid var(--color-light-grey);
+		padding: rem(16);
+		justify-content: space-around;
+	}
+
+	&__desc {
+		margin-bottom: rem(20);
+	}
+
+	&__btn {
+		text-align: center;
+	}
+
+	&__change {
+		border: none;
+		cursor: pointer;
+		height: 100%;
+		line-height: 100%;
+	}
+
+	&__count {
+		display: inline-block;
+		width: rem(32);
+		position: relative;
+		margin: 0 rem(16);
+
+		p {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&__icon {
+		cursor: pointer;
+	}
+
+	&__icon-heart {
+		line-height: 100%;
+	}
+
+	&__features {
+		display: flex;
+	}
+
+	&__features-title {
+		width: 50%;
+	}
+
+	&__features-box {
+		width: 50%;
+	}
+
+	&__features-item {
+		display: flex;
+	}
+}

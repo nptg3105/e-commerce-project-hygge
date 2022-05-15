@@ -1,0 +1,25 @@
+@import 'styles/_index.scss';
+
+.cart {
+	&__head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__btn {
+		width: auto;
+		padding: rem(10) rem(24);
+		transition: 0.25s;
+		border: 1px solid var(--color-black);
+
+		&:hover {
+			background-color: var(--color-black);
+			color: var(--color-white);
+		}
+	}
+
+	&__item {
+		border: 1px solid var(--color-light-grey);
+	}
+}

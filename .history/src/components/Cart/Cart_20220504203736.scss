@@ -1,0 +1,8 @@
+@import 'styles/_index.scss';
+
+.cart {
+	&__head {
+		display: flex;
+		justify-content: flex-start;
+	}
+}

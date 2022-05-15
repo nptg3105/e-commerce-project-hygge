@@ -1,0 +1,21 @@
+@import 'styles/_index.scss';
+
+.product-detail {
+	font-family: 'Montserrat', sans-serif;
+
+	&__infor {
+		display: flex;
+	}
+
+	&__photo {
+	}
+
+	&__image {
+		width: 800px;
+		height: 500px;
+	}
+
+	&__box {
+		width: 60%;
+	}
+}

@@ -1,0 +1,19 @@
+import React from 'react'
+import './Newsletter.scss'
+
+const Newsletter = () => (
+	<section className="section-newsletter">
+		<div className="container newsletter">
+			<p className="sub-heading newsletter__sub">- Our Newsletter</p>
+			<h2 className="heading-primary newsletter__heading">Sign Up to our Newsletter</h2>
+			<form className="newsletter__form">
+				<input className="newsletter__input" placeholder="Your Email" type="email" />
+				<button type="submit" className="btn btn--primary ">
+					Sign Up
+				</button>
+			</form>
+		</div>
+	</section>
+)
+
+export default Newsletter

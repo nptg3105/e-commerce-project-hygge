@@ -1,0 +1,18 @@
+@import 'styles/_index.scss';
+
+.cart {
+	&__head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__btn {
+		width: auto;
+		padding: rem(10) rem(18);
+
+		&:hover {
+			border: 1px solid var(--color-black);
+		}
+	}
+}

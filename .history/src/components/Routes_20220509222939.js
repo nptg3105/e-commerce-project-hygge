@@ -1,0 +1,42 @@
+import Homepage from 'components/HomePage/HomePage'
+import Login from 'components/Login/Login'
+import ListPage from 'components/Products/pages/ListPage'
+import Register from 'components/Register/Register'
+import React from 'react'
+import { useRoutes } from 'react-router-dom'
+import CartFeature from './Cart/CartFeature'
+import Header from './Header/Header'
+
+const routes = [
+	{
+		path: '/',
+		element: <Homepage />
+	},
+	{
+		path: 'register',
+		element: <Register />
+	},
+	{
+		path: 'login',
+		element: <Login />
+	},
+	{
+		path: 'products',
+		element: <ListPage />
+	},
+	{
+		path: 'products/:productId',
+		element: <Header />
+	},
+	{
+		path: 'cart',
+		element: <CartFeature />
+	}
+]
+
+const Routes = () => {
+	const routing = useRoutes(routes)
+	return routing
+}
+
+export default Routes

@@ -1,0 +1,15 @@
+import PropTypes from 'prop-types'
+import React from 'react'
+import { Box, Typography } from '../../../../../node_modules/@mui/material/index'
+
+const FilterByCategory = ({ onChange }) => (
+	<Box>
+		<Typography>Danh muc san pham</Typography>
+	</Box>
+)
+
+FilterByCategory.propTypes = {
+	onChange: PropTypes.func.isRequired
+}
+
+export default FilterByCategory

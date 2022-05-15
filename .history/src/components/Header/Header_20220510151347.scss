@@ -1,0 +1,49 @@
+@import 'styles/_index.scss';
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: rem(50) 0;
+	font-family: 'Montserrat', sans-serif;
+	position: relative;
+
+	&__logo {
+		width: rem(80);
+		height: rem(80);
+		object-fit: cover;
+		cursor: pointer;
+	}
+
+	&__burger {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: var(--color-light-grey);
+		padding: rem(10) rem(10);
+		border-radius: rem(50);
+	}
+
+	&__control {
+		display: flex;
+		// align-items: center;
+		justify-content: space-between;
+	}
+
+	&__item {
+		padding: rem(8);
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.nav {
+	position: fixed;
+	height: 100vh;
+}
