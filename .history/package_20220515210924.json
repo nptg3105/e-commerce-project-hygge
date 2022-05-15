@@ -1,5 +1,5 @@
 {
-	"homepage": "http://nptg3105.github.io/E-commerce-2/",
+	"homepage": "http://nptg3105.github.io/E-commerce-2",
 	"name": "ecomerce-fe",
 	"version": "0.1.0",
 	"private": true,
@@ -73,9 +73,7 @@
 		"eject": "react-scripts eject",
 		"prepare": "husky install",
 		"lint": "eslint --fix \"src/**/*.{js,jsx}\"",
-		"pretty": "prettier --write \"src/**/*.{js,jsx}\"",
-		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build"
+		"pretty": "prettier --write \"src/**/*.{js,jsx}\""
 	},
 	"husky": {
 		"hooks": {
