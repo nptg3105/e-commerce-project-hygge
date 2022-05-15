@@ -28,6 +28,7 @@
 		"@trendyol-js/react-carousel": "^2.0.1",
 		"axios": "^0.26.0",
 		"font-awesome": "^4.7.0",
+		"heroku": "^7.60.2",
 		"i18next": "^21.6.12",
 		"notistack": "^2.0.3",
 		"query-string": "^7.1.1",
