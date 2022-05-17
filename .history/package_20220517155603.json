@@ -74,7 +74,7 @@
 		"prepare": "husky install",
 		"lint": "eslint --fix \"src/**/*.{js,jsx}\"",
 		"pretty": "prettier --write \"src/**/*.{js,jsx}\"",
-		"predeploy": "npm run build",
+		"predeploy": "react-scripts build",
 		"deploy": "gh-pages -d build"
 	},
 	"husky": {
