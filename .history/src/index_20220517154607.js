@@ -11,7 +11,7 @@ import App from './components/App'
 
 const Root = () => (
 	<React.StrictMode>
-		<BrowserRouter basename={window.location.pathname || ''}>
+		<BrowserRouter basename={window.location.pathname || ''>
 			<HelmetProvider>
 				<ReduxProvider store={store}>
 					<PersistGate persistor={persistor} loading={null}>
