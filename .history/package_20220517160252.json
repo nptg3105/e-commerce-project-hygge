@@ -2,7 +2,7 @@
 	"homepage": "https://nptg3105.github.io/e-commerce-project-hygge",
 	"name": "ecomerce-fe",
 	"version": "0.1.0",
-	"private": false,
+	"private": true,
 	"browserslist": {
 		"production": [
 			">0.2%",
