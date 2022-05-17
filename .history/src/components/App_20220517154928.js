@@ -5,7 +5,7 @@ import React from 'react'
 const App = () => (
 	<>
 		<CssBaseline />
-		<Routes exact path="/" component={App} />
+		<Routes exact path="/" component={Index} />
 	</>
 )
 
