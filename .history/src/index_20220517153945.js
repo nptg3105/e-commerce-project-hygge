@@ -11,7 +11,7 @@ import App from './components/App'
 
 const Root = () => (
 	<React.StrictMode>
-		<BrowserRouter basename="/e-commerce-project-hygge">
+		<BrowserRouter>
 			<HelmetProvider>
 				<ReduxProvider store={store}>
 					<PersistGate persistor={persistor} loading={null}>
