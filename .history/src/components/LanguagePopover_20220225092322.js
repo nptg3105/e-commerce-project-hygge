@@ -1,7 +1,7 @@
 import { IconButton, ListItemText, MenuItem, Popover, Tooltip, Typography } from '@mui/material'
+import useLanguage from 'hooks/useLanguage'
 import React, { useRef, useState } from 'react'
 import Flag from 'react-flagkit'
-import useLanguage from '../hooks/useLanguage'
 
 const LanguagePopover = () => {
 	const anchorRef = useRef(null)

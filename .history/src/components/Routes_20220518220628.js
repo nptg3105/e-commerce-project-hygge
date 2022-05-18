@@ -1,3 +1,4 @@
+import Register from 'components/Register/Register'
 import React from 'react'
 import { useRoutes } from 'react-router-dom'
 import CartFeature from './Cart/CartFeature'
@@ -5,7 +6,6 @@ import Homepage from './HomePage/HomePage'
 import Login from './Login/Login'
 import DetailPage from './Products/pages/DetailPage'
 import ListPage from './Products/pages/ListPage'
-import Register from './Register/Register'
 
 const routes = [
 	{

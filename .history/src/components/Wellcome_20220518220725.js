@@ -1,8 +1,8 @@
 import { Button } from '@mui/material'
+import useLanguage from 'hooks/useLanguage'
+import useNotify from 'hooks/useNotify'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import useLanguage from '../hooks/useLanguage'
-import useNotify from '../hooks/useNotify'
 import LanguagePopover from './LanguagePopover'
 
 const Wellcome = () => {
