@@ -1,6 +1,6 @@
 import persistReducer from 'redux-persist/es/persistReducer'
 import storage from 'redux-persist/lib/storage'
-import { I18nActions } from '../actions/i18n'
+import { I18nActions } from 'redux/actions/i18n'
 
 const initialValue = {
 	language: {

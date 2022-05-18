@@ -1,9 +1,9 @@
 import { applyMiddleware, combineReducers, compose, createStore } from 'redux'
 import { persistStore } from 'redux-persist'
 import thunk from 'redux-thunk'
+import i18nReducer from 'redux/reducers/i18n'
 import cartReducer from '../components/Cart/CartSlice'
 import authReducer from './reducers/auth'
-import i18nReducer from './reducers/i18n'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 

@@ -1,8 +1,8 @@
 import { useCallback, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
-import { changeLanguage } from '../redux/actions/i18n'
-import { selectLanguage } from '../redux/selectors/i18nSelector'
+import { changeLanguage } from 'redux/actions/i18n'
+import { selectLanguage } from 'redux/selectors/i18nSelector'
 
 const languages = [
 	{
