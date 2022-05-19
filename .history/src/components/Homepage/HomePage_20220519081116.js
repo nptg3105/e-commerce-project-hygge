@@ -7,6 +7,7 @@ import React, { useEffect, useState } from 'react'
 import ItemsCarousel from 'react-items-carousel'
 import { Link } from 'react-router-dom'
 import newestProductsAPI from '../../services/productsNewestApi'
+import reviewAPI from '../../services/reviewApi'
 import Newsletter from '../Newsletter/Newsletter'
 import ProductList from '../Products/components/ProductList'
 import ProductSkeletonList from '../Products/components/ProductSkeletonList'
@@ -32,17 +33,17 @@ const Homepage = () => {
 		getProducts()
 	}, [])
 
-	// useEffect(() => {
-	// 	const getReviews = async () => {
-	// 		try {
-	// 			const { reviews } = await reviewAPI.getReviewAPI()
-	// 			setReviewList(reviews)
-	// 		} catch (err) {
-	// 			console.log(err)
-	// 		}
-	// 	}
-	// 	getReviews()
-	// }, [])
+	useEffect(() => {
+		const getReviews = async () => {
+			try {
+				const { reviews } = await reviewAPI.getReviewAPI()
+				setReviewList(reviews)
+			} catch (err) {
+				console.log(err)
+			}
+		}
+		getReviews()
+	}, [])
 
 	return (
 		<section className="main">

@@ -17,7 +17,7 @@ const Homepage = () => {
 	const [active, setActive] = useState(0)
 	const [productLists, setProductList] = useState([])
 	const [loading, setLoading] = useState(true)
-	// const [reviewList, setReviewList] = useState([])
+	const [reviewList, setReviewList] = useState([])
 
 	useEffect(() => {
 		const getProducts = async filter => {
