@@ -1,8 +1,8 @@
 @use './variables.scss';
-@use './color';
-@use './base';
-@use './font';
-@use './function';
+@use 'styles/color';
+@use 'styles/base';
+@use 'styles/font';
+@use 'styles/function';
 
 * {
 	box-sizing: border-box;
