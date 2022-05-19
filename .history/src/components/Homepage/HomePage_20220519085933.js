@@ -14,16 +14,10 @@ import Review from './components/Review'
 import './HomePage.scss'
 
 const Homepage = () => {
-	const breakPointsReview = [
-		{ width: 1, itemsToShow: 1 },
-		{ width: 550, itemsToShow: 1 },
-		{ width: 768, itemsToShow: 1 },
-		{ width: 1200, itemsToShow: 1 }
-	]
 	const breakPoints = [
-		{ width: 1, itemsToShow: 1 },
+		{ width: 1, itemsToShow: 2 },
 		{ width: 550, itemsToShow: 3 },
-		{ width: 768, itemsToShow: 4 },
+		{ width: 768, itemsToShow: 5 },
 		{ width: 1200, itemsToShow: 4 }
 	]
 	const [productLists, setProductList] = useState([])
@@ -79,7 +73,7 @@ const Homepage = () => {
 					<i className="sub-title sub-heading">- The Categories</i>
 					<h2 className="category__title heading-primary">Browse by Category</h2>
 
-					<Carousel pagination={false} breakPoints={breakPoints}>
+					<Carousel breakPoints={breakPoints}>
 						<div className="category__item">
 							<div className="category__box">
 								<span className="category__icon">
@@ -208,7 +202,7 @@ const Homepage = () => {
 							<h2 className="review__title">What our Customers are Saying</h2>
 						</div>
 						<div className="review__text">
-							<Carousel breakPoints={breakPointsReview}>
+							<Carousel breakPoints={breakPoints}>
 								{reviewList.map(review => (
 									<div key={review.id}>
 										<Review review={review} />

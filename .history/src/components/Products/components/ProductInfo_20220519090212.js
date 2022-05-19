@@ -1,8 +1,11 @@
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
+import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import PropTypes from 'prop-types'
 import React, { useEffect, useState } from 'react'
 import Carousel from 'react-elastic-carousel'
+import ItemsCarousel from 'react-items-carousel'
 import { Link } from 'react-router-dom'
 import productsAPI from '../../../services/productsAPI'
 import reviewAPI from '../../../services/reviewApi'
@@ -22,17 +25,11 @@ const ProductInfo = ({ productDetail }) => {
 		{ width: 768, itemsToShow: 1 },
 		{ width: 1200, itemsToShow: 1 }
 	]
-	const breakPointsProduct = [
-		{ width: 1, itemsToShow: 1 },
-		{ width: 550, itemsToShow: 2 },
-		{ width: 768, itemsToShow: 3 },
-		{ width: 1200, itemsToShow: 3 }
-	]
-
 	const handleAddToCartSubmit = formValues => {
 		console.log('Form submit', formValues)
 	}
 	const [reviewList, setReviewList] = useState([])
+	const [activeProduct, setActiveProduct] = useState(false)
 	const [active, setActive] = useState(false)
 
 	const [productLists, setProductList] = useState([])
@@ -207,11 +204,26 @@ const ProductInfo = ({ productDetail }) => {
 						<ProductSkeletonList />
 					) : (
 						<div className="related">
-							<Carousel pagination={false} breakPoints={breakPointsProduct}>
+							<ItemsCarousel
+								// infiniteLoop
+								gutter={10}
+								activePosition="center"
+								chevronWidth={50}
+								disableSwipe={false}
+								alwaysShowChevrons={false}
+								numberOfCards={2}
+								slidesToScroll={2}
+								showSlither={false}
+								// firstAndLastGutter={false}
+								activeItemIndex={activeProduct}
+								requestToChangeActive={e => setActiveProduct(e)}
+								rightChevron={<ChevronRightIcon />}
+								leftChevron={<ChevronLeftIcon />}
+							>
 								{productLists.map(product => (
 									<Product key={product.id} product={product} />
 								))}
-							</Carousel>
+							</ItemsCarousel>
 						</div>
 					)}
 				</div>

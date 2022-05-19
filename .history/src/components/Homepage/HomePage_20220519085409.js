@@ -1,34 +1,30 @@
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
+import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined'
 import ShoppingCartCheckoutOutlinedIcon from '@mui/icons-material/ShoppingCartCheckoutOutlined'
 import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined'
 import React, { useEffect, useState } from 'react'
 import Carousel from 'react-elastic-carousel'
+import ItemsCarousel from 'react-items-carousel'
 import { Link } from 'react-router-dom'
 import newestProductsAPI from '../../services/productsNewestApi'
-import reviewAPI from '../../services/reviewApi'
 import Newsletter from '../Newsletter/Newsletter'
 import ProductList from '../Products/components/ProductList'
 import ProductSkeletonList from '../Products/components/ProductSkeletonList'
 import withLayout from '../withLayout'
-import Review from './components/Review'
 import './HomePage.scss'
 
 const Homepage = () => {
-	const breakPointsReview = [
-		{ width: 1, itemsToShow: 1 },
-		{ width: 550, itemsToShow: 1 },
-		{ width: 768, itemsToShow: 1 },
-		{ width: 1200, itemsToShow: 1 }
-	]
 	const breakPoints = [
-		{ width: 1, itemsToShow: 1 },
+		{ width: 1, itemsToShow: 2 },
 		{ width: 550, itemsToShow: 3 },
-		{ width: 768, itemsToShow: 4 },
+		{ width: 768, itemsToShow: 5 },
 		{ width: 1200, itemsToShow: 4 }
 	]
+	const [active, setActive] = useState(0)
 	const [productLists, setProductList] = useState([])
 	const [loading, setLoading] = useState(true)
-	const [reviewList, setReviewList] = useState([])
+	// const [reviewList, setReviewList] = useState([])
 
 	useEffect(() => {
 		const getProducts = async filter => {
@@ -43,17 +39,17 @@ const Homepage = () => {
 		getProducts()
 	}, [])
 
-	useEffect(() => {
-		const getReviews = async () => {
-			try {
-				const { reviews } = await reviewAPI.getReviewAPI()
-				setReviewList(reviews)
-			} catch (err) {
-				console.log(err)
-			}
-		}
-		getReviews()
-	}, [])
+	// useEffect(() => {
+	// 	const getReviews = async () => {
+	// 		try {
+	// 			const { reviews } = await reviewAPI.getReviewAPI()
+	// 			setReviewList(reviews)
+	// 		} catch (err) {
+	// 			console.log(err)
+	// 		}
+	// 	}
+	// 	getReviews()
+	// }, [])
 
 	return (
 		<section className="main">
@@ -79,7 +75,7 @@ const Homepage = () => {
 					<i className="sub-title sub-heading">- The Categories</i>
 					<h2 className="category__title heading-primary">Browse by Category</h2>
 
-					<Carousel pagination={false} breakPoints={breakPoints}>
+					<Carousel breakPoints={breakPoints}>
 						<div className="category__item">
 							<div className="category__box">
 								<span className="category__icon">
@@ -208,13 +204,29 @@ const Homepage = () => {
 							<h2 className="review__title">What our Customers are Saying</h2>
 						</div>
 						<div className="review__text">
-							<Carousel breakPoints={breakPointsReview}>
-								{reviewList.map(review => (
+							<ItemsCarousel
+								infiniteLoop
+								gutter={10}
+								activePosition="center"
+								chevronWidth={10}
+								disableSwipe={false}
+								alwaysShowChevrons={false}
+								numberOfCards={1}
+								slidesToScroll={1}
+								outsideChevron
+								showSlither={false}
+								firstAndLastGutter={false}
+								activeItemIndex={active}
+								requestToChangeActive={value => setActive(value)}
+								rightChevron={<ChevronRightIcon />}
+								leftChevron={<ChevronLeftIcon />}
+							>
+								{/* {reviewList.map(review => (
 									<div key={review.id}>
 										<Review review={review} />
 									</div>
-								))}
-							</Carousel>
+								))} */}
+							</ItemsCarousel>
 						</div>
 					</div>
 				</div>

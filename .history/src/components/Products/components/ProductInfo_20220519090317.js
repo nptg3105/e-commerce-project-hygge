@@ -22,17 +22,11 @@ const ProductInfo = ({ productDetail }) => {
 		{ width: 768, itemsToShow: 1 },
 		{ width: 1200, itemsToShow: 1 }
 	]
-	const breakPointsProduct = [
-		{ width: 1, itemsToShow: 1 },
-		{ width: 550, itemsToShow: 2 },
-		{ width: 768, itemsToShow: 3 },
-		{ width: 1200, itemsToShow: 3 }
-	]
-
 	const handleAddToCartSubmit = formValues => {
 		console.log('Form submit', formValues)
 	}
 	const [reviewList, setReviewList] = useState([])
+	const [activeProduct, setActiveProduct] = useState(false)
 	const [active, setActive] = useState(false)
 
 	const [productLists, setProductList] = useState([])
@@ -207,7 +201,7 @@ const ProductInfo = ({ productDetail }) => {
 						<ProductSkeletonList />
 					) : (
 						<div className="related">
-							<Carousel pagination={false} breakPoints={breakPointsProduct}>
+							<Carousel breakPoints={breakPointsReview}>
 								{productLists.map(product => (
 									<Product key={product.id} product={product} />
 								))}

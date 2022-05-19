@@ -207,7 +207,7 @@ const ProductInfo = ({ productDetail }) => {
 						<ProductSkeletonList />
 					) : (
 						<div className="related">
-							<Carousel pagination={false} breakPoints={breakPointsProduct}>
+							<Carousel breakPoints={breakPointsProduct}>
 								{productLists.map(product => (
 									<Product key={product.id} product={product} />
 								))}

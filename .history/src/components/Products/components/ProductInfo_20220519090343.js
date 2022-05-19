@@ -24,9 +24,9 @@ const ProductInfo = ({ productDetail }) => {
 	]
 	const breakPointsProduct = [
 		{ width: 1, itemsToShow: 1 },
-		{ width: 550, itemsToShow: 2 },
-		{ width: 768, itemsToShow: 3 },
-		{ width: 1200, itemsToShow: 3 }
+		{ width: 550, itemsToShow: 1 },
+		{ width: 768, itemsToShow: 1 },
+		{ width: 1200, itemsToShow: 1 }
 	]
 
 	const handleAddToCartSubmit = formValues => {
@@ -207,7 +207,7 @@ const ProductInfo = ({ productDetail }) => {
 						<ProductSkeletonList />
 					) : (
 						<div className="related">
-							<Carousel pagination={false} breakPoints={breakPointsProduct}>
+							<Carousel breakPoints={breakPointsProduct}>
 								{productLists.map(product => (
 									<Product key={product.id} product={product} />
 								))}

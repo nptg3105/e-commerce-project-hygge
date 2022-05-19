@@ -79,7 +79,7 @@ const Homepage = () => {
 					<i className="sub-title sub-heading">- The Categories</i>
 					<h2 className="category__title heading-primary">Browse by Category</h2>
 
-					<Carousel pagination={false} breakPoints={breakPoints}>
+					<Carousel breakPoints={breakPoints}>
 						<div className="category__item">
 							<div className="category__box">
 								<span className="category__icon">
