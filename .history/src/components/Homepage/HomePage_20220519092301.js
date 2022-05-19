@@ -209,7 +209,7 @@ const Homepage = () => {
 						</div>
 						<div className="review__text">
 							<Carousel breakPoints={breakPointsReview}>
-								{reviewList?.map(review => (
+								{reviewList.map?(review => (
 									<div key={review.id}>
 										<Review review={review} />
 									</div>
