@@ -7,7 +7,7 @@ import { Menu, MenuItem } from '@mui/material'
 import Badge from '@mui/material/Badge'
 import InputBase from '@mui/material/InputBase'
 import { alpha, styled } from '@mui/material/styles'
-import React, { useCallback, useState } from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { logout } from '../../redux/actions/auth'
@@ -77,13 +77,13 @@ const Header = () => {
 		setAnchorEl(null)
 	}
 
-	const lockScroll = useCallback(() => {
-		document.body.style.overflow = 'hidden'
-	}, [])
+	// const lockScroll = useCallback(() => {
+	// 	document.body.style.overflow = 'hidden'
+	// }, [])
 
-	const unlockScroll = useCallback(() => {
-		document.body.style.overflow = ''
-	}, [])
+	// const unlockScroll = useCallback(() => {
+	// 	document.body.style.overflow = ''
+	// }, [])
 
 	const [active, setActive] = useState(false)
 	const closeMenu = () => {
@@ -105,7 +105,6 @@ const Header = () => {
 								setActive(!active)
 							}}
 						>
-							{active ? lockScroll() : unlockScroll()}
 							{active ? <CloseIcon /> : <MenuIcon />}
 						</div>
 						<div className="header__control">

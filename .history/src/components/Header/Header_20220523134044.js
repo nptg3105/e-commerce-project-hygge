@@ -1,3 +1,4 @@
+/* eslint-disavle */
 import CloseIcon from '@mui/icons-material/Close'
 import MenuIcon from '@mui/icons-material/Menu'
 import PersonIcon from '@mui/icons-material/Person'
@@ -103,10 +104,12 @@ const Header = () => {
 							className="header__burger"
 							onClick={() => {
 								setActive(!active)
+
+								active ? lockScroll() : 'null'
 							}}
 						>
-							{active ? lockScroll() : unlockScroll()}
 							{active ? <CloseIcon /> : <MenuIcon />}
+							{console.log(active)}
 						</div>
 						<div className="header__control">
 							<div className="header__item search-icon">

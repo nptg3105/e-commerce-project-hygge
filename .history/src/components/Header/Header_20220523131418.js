@@ -81,10 +81,6 @@ const Header = () => {
 		document.body.style.overflow = 'hidden'
 	}, [])
 
-	const unlockScroll = useCallback(() => {
-		document.body.style.overflow = ''
-	}, [])
-
 	const [active, setActive] = useState(false)
 	const closeMenu = () => {
 		setActive(false)
@@ -99,13 +95,7 @@ const Header = () => {
 						<Link to="/">
 							<img src="images/logo_with_text.svg" alt="logo-footer" />
 						</Link>
-						<div
-							className="header__burger"
-							onClick={() => {
-								setActive(!active)
-							}}
-						>
-							{active ? lockScroll() : unlockScroll()}
+						<div className="header__burger" onClick={() => setActive(!active)}>
 							{active ? <CloseIcon /> : <MenuIcon />}
 						</div>
 						<div className="header__control">

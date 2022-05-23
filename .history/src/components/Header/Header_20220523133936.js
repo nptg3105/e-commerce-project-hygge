@@ -1,3 +1,4 @@
+/* eslint-disavle */
 import CloseIcon from '@mui/icons-material/Close'
 import MenuIcon from '@mui/icons-material/Menu'
 import PersonIcon from '@mui/icons-material/Person'
@@ -77,18 +78,22 @@ const Header = () => {
 		setAnchorEl(null)
 	}
 
-	const lockScroll = useCallback(() => {
-		document.body.style.overflow = 'hidden'
-	}, [])
+	// const lockScroll = useCallback(() => {
+	// 	document.body.style.overflow = 'hidden'
+	// }, [])
 
-	const unlockScroll = useCallback(() => {
-		document.body.style.overflow = ''
-	}, [])
+	// const unlockScroll = useCallback(() => {
+	// 	document.body.style.overflow = ''
+	// }, [])
 
 	const [active, setActive] = useState(false)
 	const closeMenu = () => {
 		setActive(false)
 	}
+
+	const scroll = useCallback(() => {
+		document.body.style.overflow = ''
+	}, [])
 
 	return (
 		<>
@@ -102,11 +107,12 @@ const Header = () => {
 						<div
 							className="header__burger"
 							onClick={() => {
+								scroll()
 								setActive(!active)
 							}}
 						>
-							{active ? lockScroll() : unlockScroll()}
 							{active ? <CloseIcon /> : <MenuIcon />}
+							{console.log(active)}
 						</div>
 						<div className="header__control">
 							<div className="header__item search-icon">

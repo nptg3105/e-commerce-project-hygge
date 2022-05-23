@@ -7,7 +7,7 @@ import { Menu, MenuItem } from '@mui/material'
 import Badge from '@mui/material/Badge'
 import InputBase from '@mui/material/InputBase'
 import { alpha, styled } from '@mui/material/styles'
-import React, { useCallback, useState } from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { logout } from '../../redux/actions/auth'
@@ -62,7 +62,7 @@ const Header = () => {
 	const cartItemsCount = useSelector(cartItemsCountSelector)
 	const isLogged = useSelector(selectIslogin)
 	const dispatch = useDispatch()
-	const [anchorEl, setAnchorEl] = useState(null)
+	const [anchorEl, setAnchorEl] = React.useState(null)
 	const open = Boolean(anchorEl)
 	const handleClick = event => {
 		setAnchorEl(event.currentTarget)
@@ -77,18 +77,8 @@ const Header = () => {
 		setAnchorEl(null)
 	}
 
-	const lockScroll = useCallback(() => {
-		document.body.style.overflow = 'hidden'
-	}, [])
-
-	const unlockScroll = useCallback(() => {
-		document.body.style.overflow = ''
-	}, [])
-
 	const [active, setActive] = useState(false)
-	const closeMenu = () => {
-		setActive(false)
-	}
+	const closeMenu = () => setActive(false)
 
 	return (
 		<>
@@ -99,13 +89,7 @@ const Header = () => {
 						<Link to="/">
 							<img src="images/logo_with_text.svg" alt="logo-footer" />
 						</Link>
-						<div
-							className="header__burger"
-							onClick={() => {
-								setActive(!active)
-							}}
-						>
-							{active ? lockScroll() : unlockScroll()}
+						<div className="header__burger" onClick={() => setActive(!active)}>
 							{active ? <CloseIcon /> : <MenuIcon />}
 						</div>
 						<div className="header__control">

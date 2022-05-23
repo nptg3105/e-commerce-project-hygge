@@ -1,5 +1,12 @@
 @import '../../styles/index';
 
+* {
+	-ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+	display: none;
+}
+
 .header {
 	display: flex;
 	align-items: center;
@@ -56,7 +63,6 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	animation: moveRight 0.5s ease-in-out;
 
 	&__item {
 		margin-bottom: rem(20);
@@ -67,15 +73,6 @@
 		&:hover a {
 			color: var(--color-primary);
 		}
-	}
-}
-
-@keyframes moveRight {
-	from {
-		transform: translateY(100%);
-	}
-	to {
-		transform: translateY(0%);
 	}
 }
 

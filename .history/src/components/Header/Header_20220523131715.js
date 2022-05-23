@@ -87,6 +87,8 @@ const Header = () => {
 
 	const [active, setActive] = useState(false)
 	const closeMenu = () => {
+		unlockScroll()
+
 		setActive(false)
 	}
 
@@ -102,10 +104,10 @@ const Header = () => {
 						<div
 							className="header__burger"
 							onClick={() => {
+								lockScroll()
 								setActive(!active)
 							}}
 						>
-							{active ? lockScroll() : unlockScroll()}
 							{active ? <CloseIcon /> : <MenuIcon />}
 						</div>
 						<div className="header__control">

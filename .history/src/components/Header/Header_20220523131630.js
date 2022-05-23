@@ -81,10 +81,6 @@ const Header = () => {
 		document.body.style.overflow = 'hidden'
 	}, [])
 
-	const unlockScroll = useCallback(() => {
-		document.body.style.overflow = ''
-	}, [])
-
 	const [active, setActive] = useState(false)
 	const closeMenu = () => {
 		setActive(false)
@@ -102,10 +98,10 @@ const Header = () => {
 						<div
 							className="header__burger"
 							onClick={() => {
+								lockScroll9
 								setActive(!active)
 							}}
 						>
-							{active ? lockScroll() : unlockScroll()}
 							{active ? <CloseIcon /> : <MenuIcon />}
 						</div>
 						<div className="header__control">

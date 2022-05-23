@@ -1,4 +1,3 @@
-/*eslint-disable*/
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined'
 import ShoppingCartCheckoutOutlinedIcon from '@mui/icons-material/ShoppingCartCheckoutOutlined'
 import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined'

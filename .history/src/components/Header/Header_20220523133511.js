@@ -77,18 +77,21 @@ const Header = () => {
 		setAnchorEl(null)
 	}
 
-	const lockScroll = useCallback(() => {
-		document.body.style.overflow = 'hidden'
-	}, [])
+	// const lockScroll = useCallback(() => {
+	// 	document.body.style.overflow = 'hidden'
+	// }, [])
 
-	const unlockScroll = useCallback(() => {
-		document.body.style.overflow = ''
-	}, [])
+	// const unlockScroll = useCallback(() => {
+	// 	document.body.style.overflow = ''
+	// }, [])
 
 	const [active, setActive] = useState(false)
 	const closeMenu = () => {
 		setActive(false)
 	}
+	const lockScroll = useCallback(() => {
+		document.body.style.overflow = 'hidden'
+	}, [active])
 
 	return (
 		<>
@@ -102,10 +105,10 @@ const Header = () => {
 						<div
 							className="header__burger"
 							onClick={() => {
+								lockScroll()
 								setActive(!active)
 							}}
 						>
-							{active ? lockScroll() : unlockScroll()}
 							{active ? <CloseIcon /> : <MenuIcon />}
 						</div>
 						<div className="header__control">

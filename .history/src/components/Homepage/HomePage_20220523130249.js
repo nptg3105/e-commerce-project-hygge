@@ -30,6 +30,8 @@ const Homepage = () => {
 	const [productLists, setProductList] = useState([])
 	const [loading, setLoading] = useState(true)
 	const [reviewList, setReviewList] = useState([])
+	const [active, setActive] = useState(false)
+	const closeMenu = () => setActive(false)
 
 	useEffect(() => {
 		const getProducts = async filter => {
@@ -57,7 +59,7 @@ const Homepage = () => {
 	}, [])
 
 	return (
-		<section className="main">
+		<section className={`main ${active ? 'hide' : ''}`}>
 			<section className="section-hero">
 				<div className="container hero">
 					<div className="hero__banner">

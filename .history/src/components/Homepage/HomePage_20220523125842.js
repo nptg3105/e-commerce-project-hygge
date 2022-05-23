@@ -1,4 +1,3 @@
-/*eslint-disable*/
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined'
 import ShoppingCartCheckoutOutlinedIcon from '@mui/icons-material/ShoppingCartCheckoutOutlined'
 import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined'
@@ -30,6 +29,7 @@ const Homepage = () => {
 	const [productLists, setProductList] = useState([])
 	const [loading, setLoading] = useState(true)
 	const [reviewList, setReviewList] = useState([])
+	const [active, setActive] = useState(false)
 
 	useEffect(() => {
 		const getProducts = async filter => {

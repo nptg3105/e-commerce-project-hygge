@@ -62,7 +62,7 @@ const Header = () => {
 	const cartItemsCount = useSelector(cartItemsCountSelector)
 	const isLogged = useSelector(selectIslogin)
 	const dispatch = useDispatch()
-	const [anchorEl, setAnchorEl] = useState(null)
+	const [anchorEl, setAnchorEl] = React.useState(null)
 	const open = Boolean(anchorEl)
 	const handleClick = event => {
 		setAnchorEl(event.currentTarget)
@@ -81,12 +81,9 @@ const Header = () => {
 		document.body.style.overflow = 'hidden'
 	}, [])
 
-	const unlockScroll = useCallback(() => {
-		document.body.style.overflow = ''
-	}, [])
-
 	const [active, setActive] = useState(false)
 	const closeMenu = () => {
+		lockScroll()
 		setActive(false)
 	}
 
@@ -99,13 +96,7 @@ const Header = () => {
 						<Link to="/">
 							<img src="images/logo_with_text.svg" alt="logo-footer" />
 						</Link>
-						<div
-							className="header__burger"
-							onClick={() => {
-								setActive(!active)
-							}}
-						>
-							{active ? lockScroll() : unlockScroll()}
+						<div className="header__burger" onClick={() => setActive(!active)}>
 							{active ? <CloseIcon /> : <MenuIcon />}
 						</div>
 						<div className="header__control">

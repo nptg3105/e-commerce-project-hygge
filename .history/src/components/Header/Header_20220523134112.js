@@ -107,6 +107,7 @@ const Header = () => {
 						>
 							{active ? lockScroll() : unlockScroll()}
 							{active ? <CloseIcon /> : <MenuIcon />}
+							{console.log(active)}
 						</div>
 						<div className="header__control">
 							<div className="header__item search-icon">

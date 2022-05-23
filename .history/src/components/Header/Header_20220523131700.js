@@ -102,10 +102,11 @@ const Header = () => {
 						<div
 							className="header__burger"
 							onClick={() => {
+								lockScroll()
 								setActive(!active)
+								unlockScroll()
 							}}
 						>
-							{active ? lockScroll() : unlockScroll()}
 							{active ? <CloseIcon /> : <MenuIcon />}
 						</div>
 						<div className="header__control">

@@ -56,7 +56,6 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	animation: moveRight 0.5s ease-in-out;
 
 	&__item {
 		margin-bottom: rem(20);
@@ -69,14 +68,8 @@
 		}
 	}
 }
-
-@keyframes moveRight {
-	from {
-		transform: translateY(100%);
-	}
-	to {
-		transform: translateY(0%);
-	}
+body {
+	overflow: hidden;
 }
 
 .nav-footer {
@@ -87,10 +80,6 @@
 	&__item {
 		margin-right: rem(20);
 	}
-}
-
-.hide {
-	overflow: hidden;
 }
 
 @media (max-width: $xs-min) {

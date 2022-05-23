@@ -56,7 +56,6 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	animation: moveRight 0.5s ease-in-out;
 
 	&__item {
 		margin-bottom: rem(20);
@@ -72,10 +71,10 @@
 
 @keyframes moveRight {
 	from {
-		transform: translateY(100%);
+		transform: translateX(0%);
 	}
 	to {
-		transform: translateY(0%);
+		transform: translateX(100%);
 	}
 }
 

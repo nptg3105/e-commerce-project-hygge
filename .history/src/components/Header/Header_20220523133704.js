@@ -77,18 +77,21 @@ const Header = () => {
 		setAnchorEl(null)
 	}
 
-	const lockScroll = useCallback(() => {
-		document.body.style.overflow = 'hidden'
-	}, [])
+	// const lockScroll = useCallback(() => {
+	// 	document.body.style.overflow = 'hidden'
+	// }, [])
 
-	const unlockScroll = useCallback(() => {
-		document.body.style.overflow = ''
-	}, [])
+	// const unlockScroll = useCallback(() => {
+	// 	document.body.style.overflow = ''
+	// }, [])
 
 	const [active, setActive] = useState(false)
 	const closeMenu = () => {
 		setActive(false)
 	}
+	const lockScroll = useCallback(() => {
+		document.body.style.overflow = 'hidden'
+	}, [])
 
 	return (
 		<>
@@ -105,8 +108,8 @@ const Header = () => {
 								setActive(!active)
 							}}
 						>
-							{active ? lockScroll() : unlockScroll()}
 							{active ? <CloseIcon /> : <MenuIcon />}
+							{console.log(active)}
 						</div>
 						<div className="header__control">
 							<div className="header__item search-icon">
