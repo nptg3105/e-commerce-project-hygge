@@ -97,7 +97,7 @@ const Header = () => {
 				<header className="container">
 					<div className="header">
 						<Link to="/">
-							<img src="/images/logo_with_text.svg" alt="logo-footer" />
+							<img src="../../../public/images/logo_with_text.svg" alt="logo-footer" />
 						</Link>
 						<div
 							className="header__burger"
