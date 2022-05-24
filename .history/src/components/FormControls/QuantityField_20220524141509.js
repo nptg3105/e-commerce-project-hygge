@@ -18,8 +18,9 @@ const QuantityField = ({ name, control, useFormProps, dispatchQuantityID, ...res
 				<div>
 					<div className="product-detail__number">
 						{field.value - 1 < 1 ? (
-							<button type="button" className="product-detail__change" disabled>
-								<ArrowBackIosNewIcon />
+							<button className="product-detail__change" disabled>
+								{' '}
+								<ArrowBackIosNewIcon />{' '}
 							</button>
 						) : (
 							<button
@@ -33,7 +34,7 @@ const QuantityField = ({ name, control, useFormProps, dispatchQuantityID, ...res
 										})
 										dispatch(action)
 									}
-									useFormProps.setValue(name, field.value - 1)
+									useFormProps.setValue(name, Math.abs(field.value) ? Math.abs(field.value - 1) : 1)
 								}}
 							>
 								<ArrowBackIosNewIcon />
@@ -52,7 +53,7 @@ const QuantityField = ({ name, control, useFormProps, dispatchQuantityID, ...res
 									})
 									dispatch(action)
 								}
-								useFormProps.setValue(name, field.value + 1)
+								useFormProps.setValue(name, Math.abs(field.value) ? Math.abs(field.value + 1) : 1)
 							}}
 						>
 							<ArrowForwardIosIcon />

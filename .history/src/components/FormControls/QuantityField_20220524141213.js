@@ -17,29 +17,22 @@ const QuantityField = ({ name, control, useFormProps, dispatchQuantityID, ...res
 			render={({ field, formState }) => (
 				<div>
 					<div className="product-detail__number">
-						{field.value - 1 < 1 ? (
-							<button type="button" className="product-detail__change" disabled>
-								<ArrowBackIosNewIcon />
-							</button>
-						) : (
-							<button
-								className="product-detail__change"
-								type="button"
-								onClick={() => {
-									if (dispatchQuantityID) {
-										const action = setQuantity({
-											id: dispatchQuantityID,
-											quantity: field.value - 1
-										})
-										dispatch(action)
-									}
-									useFormProps.setValue(name, field.value - 1)
-								}}
-							>
-								<ArrowBackIosNewIcon />
-							</button>
-						)}
-
+						<button
+							className="product-detail__change"
+							type="button"
+							onClick={() => {
+								if (dispatchQuantityID) {
+									const action = setQuantity({
+										id: dispatchQuantityID,
+										quantity: field.value - 1
+									})
+									dispatch(action)
+								}
+								useFormProps.setValue(name, Math.abs(field.value) ? Math.abs(field.value - 1) : 1)
+							}}
+						>
+							<ArrowBackIosNewIcon />
+						</button>
 						<input className="product-detail__input" {...field} {...restProps} />
 						<button
 							className="product-detail__change"
@@ -52,7 +45,7 @@ const QuantityField = ({ name, control, useFormProps, dispatchQuantityID, ...res
 									})
 									dispatch(action)
 								}
-								useFormProps.setValue(name, field.value + 1)
+								useFormProps.setValue(name, Math.abs(field.value) ? Math.abs(field.value + 1) : 1)
 							}}
 						>
 							<ArrowForwardIosIcon />

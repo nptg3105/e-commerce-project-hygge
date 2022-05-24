@@ -37,12 +37,12 @@ const AddToCartForm = () => {
 		// console.log(action)
 		dispatch(action)
 		enqueueSnackbar('Add to Cart Successfully!', { variant: 'success' })
+		window.scrollTo(0, 0)
 	}
 
 	useEffect(() => {
 		setValue('quantity', 1)
 		console.log(1)
-		window.scrollTo(0, 0)
 	})
 
 	return (

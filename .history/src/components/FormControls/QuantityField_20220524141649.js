@@ -33,7 +33,7 @@ const QuantityField = ({ name, control, useFormProps, dispatchQuantityID, ...res
 										})
 										dispatch(action)
 									}
-									useFormProps.setValue(name, field.value - 1)
+									useFormProps.setValue(name, field.value ? field.value - 1)
 								}}
 							>
 								<ArrowBackIosNewIcon />
@@ -52,7 +52,7 @@ const QuantityField = ({ name, control, useFormProps, dispatchQuantityID, ...res
 									})
 									dispatch(action)
 								}
-								useFormProps.setValue(name, field.value + 1)
+								useFormProps.setValue(name, Math.abs(field.value) ? Math.abs(field.value + 1) : 1)
 							}}
 						>
 							<ArrowForwardIosIcon />

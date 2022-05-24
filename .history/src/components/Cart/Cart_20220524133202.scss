@@ -8,11 +8,10 @@
 	}
 
 	&__btn {
-		width: 30% !important;
+		// width: auto;
 		padding: rem(10) rem(24);
 		transition: 0.25s;
 		border: 1px solid var(--color-black);
-		text-align: center;
 
 		&:hover {
 			background-color: var(--color-black);

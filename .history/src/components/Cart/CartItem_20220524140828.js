@@ -9,6 +9,7 @@ import QuantityField from '../FormControls/QuantityField'
 import './Cart.scss'
 
 const CartItem = ({ product }) => {
+	console.log(product)
 	const schema = yup.object().shape({
 		quantity: yup
 			.number()
@@ -41,13 +42,19 @@ const CartItem = ({ product }) => {
 						</div>
 					</div>
 					<div className="cart__control">
-						<QuantityField
-							dispatchQuantityID={product.product.product.id}
-							useFormProps={{ setValue }}
-							name="quantity"
-							control={control}
-							className="form-quantity cart__quantity"
-						/>
+						{product.quantity > 0 ? (
+							<QuantityField
+								dispatchQuantityID={product.product.product.id}
+								useFormProps={{ setValue }}
+								name="quantity"
+								control={control}
+								className="form-quantity cart__quantity"
+							/>
+						) : (
+							(product.quantity = 1)
+						)}
+						{/* {console.log(product.quantity)} */}
+
 						<a href="/" className="cart__delete">
 							<CloseIcon />
 						</a>
