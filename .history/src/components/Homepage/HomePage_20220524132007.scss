@@ -39,11 +39,6 @@
 	}
 
 	.category {
-		.rec.rec-arrow:focus {
-			background-color: var(--color-primary);
-			color: var(--color-white);
-		}
-
 		.rec.rec-arrow:disabled {
 			visibility: hidden;
 		}
@@ -196,11 +191,6 @@
 			&__name {
 				margin-bottom: rem(16);
 			}
-		}
-
-		.rec.rec-arrow:focus {
-			background-color: var(--color-primary);
-			color: var(--color-white);
 		}
 
 		.rec.rec-arrow:disabled {

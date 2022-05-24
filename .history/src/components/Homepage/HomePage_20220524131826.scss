@@ -39,11 +39,6 @@
 	}
 
 	.category {
-		.rec.rec-arrow:focus {
-			background-color: var(--color-primary);
-			color: var(--color-white);
-		}
-
 		.rec.rec-arrow:disabled {
 			visibility: hidden;
 		}
@@ -198,11 +193,6 @@
 			}
 		}
 
-		.rec.rec-arrow:focus {
-			background-color: var(--color-primary);
-			color: var(--color-white);
-		}
-
 		.rec.rec-arrow:disabled {
 			visibility: hidden;
 		}
@@ -222,16 +212,11 @@
 
 		.rec.rec-dot_active {
 			background-color: var(--color-primary);
-			box-shadow: 0 0 1px 3px var(--color-primary);
 		}
 
 		.rec.rec-dot:focus {
 			background-color: var(--color-primary);
-			box-shadow: 0 0 1px 3px var(--color-primary);
-		}
-
-		.rec.rec-dot:hover {
-			box-shadow: 0 0 1px 3px var(--color-primary);
+			box-shadow: none;
 		}
 	}
 

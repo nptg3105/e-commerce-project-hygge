@@ -207,7 +207,7 @@ const Homepage = () => {
 							<i className="sub-title ">- Our Reviews</i>
 							<h2 className="review__title">What our Customers are Saying</h2>
 						</div>
-						<div className="review__text">
+						<div className="review__text category">
 							<Carousel breakPoints={breakPointsReview}>
 								{reviewList?.map(review => (
 									<div key={review.id}>

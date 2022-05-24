@@ -39,28 +39,9 @@
 	}
 
 	.category {
-		.rec.rec-arrow:focus {
-			background-color: var(--color-primary);
-			color: var(--color-white);
-		}
-
-		.rec.rec-arrow:disabled {
-			visibility: hidden;
-		}
-
 		.rec.rec-arrow {
-			background-color: var(--color-primary);
-			color: var(--color-white);
-			display: flex;
-			align-items: center;
-			justify-content: center;
+			border-radius: 0;
 		}
-
-		.rec.rec-arrow:hover {
-			background-color: var(--color-white);
-			color: var(--color-primary);
-		}
-
 		margin-bottom: rem(112);
 
 		&__item {
@@ -196,42 +177,6 @@
 			&__name {
 				margin-bottom: rem(16);
 			}
-		}
-
-		.rec.rec-arrow:focus {
-			background-color: var(--color-primary);
-			color: var(--color-white);
-		}
-
-		.rec.rec-arrow:disabled {
-			visibility: hidden;
-		}
-
-		.rec.rec-arrow {
-			background-color: var(--color-primary);
-			color: var(--color-white);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-
-		.rec.rec-arrow:hover {
-			background-color: var(--color-white);
-			color: var(--color-primary);
-		}
-
-		.rec.rec-dot_active {
-			background-color: var(--color-primary);
-			box-shadow: 0 0 1px 3px var(--color-primary);
-		}
-
-		.rec.rec-dot:focus {
-			background-color: var(--color-primary);
-			box-shadow: 0 0 1px 3px var(--color-primary);
-		}
-
-		.rec.rec-dot:hover {
-			box-shadow: 0 0 1px 3px var(--color-primary);
 		}
 	}
 
