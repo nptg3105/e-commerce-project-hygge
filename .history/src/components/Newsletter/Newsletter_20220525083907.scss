@@ -1,0 +1,70 @@
+@import '../../styles/index';
+
+.section-newsletter {
+	.newsletter {
+		background-color: var(--color-light-grey);
+		padding: rem(50);
+		border-radius: rem(50);
+
+		&__form {
+			text-align: center;
+		}
+
+		&__input {
+			display: inline-block;
+			padding: rem(20);
+			border-radius: rem(30);
+			border: rem(3) solid var(--color-light-grey);
+			outline: none;
+			margin-bottom: rem(16);
+			width: 50%;
+			margin-right: rem(25);
+		}
+
+		&__btn {
+			width: rem(200);
+			display: inline-block;
+		}
+	}
+}
+@media (max-width: $sm-min) {
+	.section-newsletter {
+		.newsletter {
+			background-color: var(--color-white);
+			padding: 0;
+			&__heading {
+				font-size: rem(32);
+				text-align: left;
+			}
+
+			&__sub {
+				text-align: left;
+			}
+
+			&__input {
+				width: 70%;
+			}
+		}
+	}
+}
+
+@media (max-width: $xs-min) {
+	.section-newsletter {
+		.newsletter {
+			padding: rem(15);
+
+			&__btn {
+				width: rem(150);
+			}
+
+			&__form {
+				display: flex;
+				flex-direction: column;
+			}
+
+			&__input {
+				width: 100%;
+			}
+		}
+	}
+}

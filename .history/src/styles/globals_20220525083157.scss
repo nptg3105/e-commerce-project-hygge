@@ -1,0 +1,114 @@
+@use './variables.scss';
+@use './color';
+@use './base';
+@use './font';
+@use './function' as *;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.pd-70 {
+	padding: 70px 0;
+}
+
+.mb-112 {
+	margin-bottom: rem(100);
+}
+
+h2 {
+	font-weight: 500;
+}
+
+.center {
+	text-align: center;
+}
+
+.main-heading {
+	font-size: 40px;
+	margin-bottom: 40px;
+	font-weight: 700;
+}
+
+.sub-heading {
+	display: block;
+	color: var(--color-blue);
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.green {
+	color: var(--color-green);
+	position: relative;
+	// overflow: hidden;
+	padding: 12px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	&::after {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		background-color: currentColor;
+		width: 100%;
+		height: 100%;
+		opacity: 0.2;
+		border-radius: 20px;
+	}
+}
+.sub-title {
+	color: var(--color-blue);
+	font-size: rem(16);
+	font-weight: 500;
+	margin-bottom: rem(8);
+}
+
+.btn__add-cart {
+	text-align: center;
+}
+
+#breadcum {
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: rem(40);
+	font-size: rem(20);
+	.breadcum__item {
+		display: inline;
+		align-items: center;
+		margin-right: rem(20);
+		a {
+			margin-right: rem(20);
+		}
+	}
+}
+
+.btn {
+	font-size: rem(20);
+	padding: rem(16);
+	border: 1px solid var(--color-light-grey);
+	border-radius: 50px;
+	text-decoration: none;
+	color: var(--color-black);
+	width: 50%;
+	display: inline-block;
+	font-weight: bold;
+	cursor: pointer;
+	text-align: center;
+
+	&--primary {
+		background-color: var(--color-primary);
+		color: var(--color-white);
+	}
+	&--secondary {
+		background-color: var(--color-white);
+	}
+	&--secondary:hover {
+		border: 1px solid var(--color-black);
+		transition: all 0.3s ease;
+	}
+
+	&--product {
+		width: 20%;
+	}
+}
