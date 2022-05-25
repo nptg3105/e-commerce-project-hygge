@@ -32,6 +32,27 @@ a {
 	color: var(--color-black);
 }
 
+.pd-70 {
+	padding: 70px 0;
+}
+
+h2 {
+	font-weight: 500;
+}
+
+.heading-primary {
+	font-size: 40px;
+	margin-bottom: 40px;
+	font-weight: 700;
+}
+
+.sub-heading {
+	display: block;
+	color: var(--color-blue);
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
 .container {
 	width: 100%;
 	padding-right: 15px;
@@ -51,6 +72,12 @@ a {
 		padding-right: 15px;
 		padding-left: 15px;
 	}
+}
+
+#breadcum {
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: rem(40);
+	font-size: rem(40);
 }
 
 @media (min-width: $xxs-min) {

@@ -81,7 +81,7 @@ const ProductInfo = ({ productDetail }) => {
 						<i className="fa-solid fa-angle-right" />
 					</div>
 					<div className="breadcum__item">
-						<a href="#related">{productDetail.product?.category}</a>
+						<a href="/">{productDetail.product?.category}</a>
 						<i className="fa-solid fa-angle-right" />
 					</div>
 					<div className="breadcum__item">
@@ -199,7 +199,7 @@ const ProductInfo = ({ productDetail }) => {
 					</div>
 				</section>
 
-				<div id="related" className="product-detail__related">
+				<div className="product-detail__related">
 					<p className="sub-heading">- Explore More</p>
 
 					<h2 className="heading-primary">Related Products</h2>

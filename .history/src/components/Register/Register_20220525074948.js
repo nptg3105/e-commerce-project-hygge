@@ -61,12 +61,12 @@ const Register = () => {
 			<div className="container">
 				<div id="breadcum">
 					<div className="breadcum__item">
-						<Link to="/">Home Page</Link>
+						<a href="/">Home Page</a>
 						<i className="fa-solid fa-angle-right" />
 					</div>
 
 					<div className="breadcum__item">
-						<span>Register</span>
+						<Link to="/register">Register</Link>
 					</div>
 				</div>
 				<ul className="register__text">

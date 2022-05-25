@@ -60,7 +60,7 @@ const Login = () => {
 					</div>
 
 					<div className="breadcum__item">
-						<span>Login</span>
+						<a href="/">Login</a>
 					</div>
 				</div>
 				<ul className="login__text">

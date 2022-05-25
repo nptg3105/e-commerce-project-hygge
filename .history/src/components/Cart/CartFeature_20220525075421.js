@@ -18,7 +18,7 @@ const CartFeature = () => {
 			<div className="container">
 				<div id="breadcum">
 					<div className="breadcum__item">
-						<Link to="/">Home Page</Link>
+						<a href="/">Home Page</a>
 						<i className="fa-solid fa-angle-right" />
 					</div>
 					<div className="breadcum__item">
@@ -26,7 +26,7 @@ const CartFeature = () => {
 						<i className="fa-solid fa-angle-right" />
 					</div>
 					<div className="breadcum__item">
-						<span>Shopping Cart</span>
+						<a href="/">Shopping Cart</a>
 					</div>
 				</div>
 				<div className="cart__head">

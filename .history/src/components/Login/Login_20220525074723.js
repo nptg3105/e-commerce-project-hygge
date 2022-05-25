@@ -3,7 +3,6 @@ import { useSnackbar } from 'notistack'
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
 import * as yup from 'yup'
 import { loginAsync } from '../../redux/actions/auth'
 import InputField from '../FormControls/InputField'
@@ -60,7 +59,7 @@ const Login = () => {
 					</div>
 
 					<div className="breadcum__item">
-						<span>Login</span>
+						<a href="/">Login</a>
 					</div>
 				</div>
 				<ul className="login__text">
@@ -93,13 +92,13 @@ const Login = () => {
 								Login
 							</button>
 							<div className="btn-login">
-								<Link to="/register" className="btn btn--secondary">
+								<a href="/register" className="btn btn--secondary">
 									Create Account
-								</Link>
+								</a>
 
-								<Link to="/login" className="btn btn--forgot">
+								<a href="/login" className="btn btn--forgot">
 									Forgot Password?
-								</Link>
+								</a>
 							</div>
 						</div>
 					</form>

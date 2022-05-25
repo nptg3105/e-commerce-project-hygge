@@ -73,19 +73,19 @@ const ProductInfo = ({ productDetail }) => {
 			<div className="container">
 				<div id="breadcum">
 					<div className="breadcum__item">
-						<Link to="/">Home Page</Link>
+						<a href="/">Home Page</a>
 						<i className="fa-solid fa-angle-right" />
 					</div>
 					<div className="breadcum__item">
-						<Link to="/products">Products</Link>
+						<Link to="/products">Categories</Link>
 						<i className="fa-solid fa-angle-right" />
 					</div>
 					<div className="breadcum__item">
-						<a href="#related">{productDetail.product?.category}</a>
+						<a href="/">{productDetail.product?.category}</a>
 						<i className="fa-solid fa-angle-right" />
 					</div>
 					<div className="breadcum__item">
-						<span>{productDetail.product?.name}</span>
+						<a href="/">{productDetail.product?.name}</a>
 					</div>
 				</div>
 				{loading ? (
@@ -199,7 +199,7 @@ const ProductInfo = ({ productDetail }) => {
 					</div>
 				</section>
 
-				<div id="related" className="product-detail__related">
+				<div className="product-detail__related">
 					<p className="sub-heading">- Explore More</p>
 
 					<h2 className="heading-primary">Related Products</h2>

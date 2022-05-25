@@ -35,7 +35,11 @@ const ListPage = () => {
 			<div className="container">
 				<div id="breadcum">
 					<div className="breadcum__item">
-						<Link to="/">Home Page</Link>
+						<a href="/">Home Page</a>
+						<i className="fa-solid fa-angle-right" />
+					</div>
+					<div className="breadcum__item">
+						<a href="/">Navigation</a>
 						<i className="fa-solid fa-angle-right" />
 					</div>
 					<div className="breadcum__item">

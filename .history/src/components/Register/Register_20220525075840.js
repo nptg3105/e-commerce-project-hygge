@@ -1,30 +1,33 @@
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useSnackbar } from 'notistack'
-import React from 'react'
+import * as React from 'react'
 import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import * as yup from 'yup'
-import { loginAsync } from '../../redux/actions/auth'
+import useLanguage from '../../hooks/useLanguage'
+import { registerAsync } from '../../redux/actions/auth'
 import InputField from '../FormControls/InputField'
-import requiredNoAuth from '../requiredNoAuth'
 import withLayout from '../withLayout'
-import './Login.scss'
+import './Register.scss'
 
-const Login = () => {
+const Register = () => {
+	const { t } = useLanguage()
+
 	const dispatch = useDispatch()
-	// const dangLogin = useSelector(selectDangLogin)
-	// console.log(dangLogin)
 
 	const { enqueueSnackbar } = useSnackbar()
 
 	const schema = yup.object().shape({
 		email: yup.string().required('Please enter your email.').email('Please enter a valid email!'),
-		password: yup.string().required('Please enter your password')
+		password: yup.string().required('Please enter your password').min(6, 'Please enter at least 6 characters.')
+		// checkbox: yup.boolean().oneOf([true], 'You must accept the terms and conditions')
 	})
 	const {
 		handleSubmit,
 		control,
+		register,
+		reset,
 		formState: { errors }
 	} = useForm({
 		defaultValues: {
@@ -36,22 +39,25 @@ const Login = () => {
 	})
 	console.log('errors', errors)
 
-	const onSubmit = async formData => {
+	const onSubmit = formData => {
+		console.log({ formData })
+
 		try {
-			await dispatch(loginAsync(formData))
-		} catch (err) {
-			const loginMessage = JSON.parse(err.message)
-			if (loginMessage.status === 'success') {
-				enqueueSnackbar(loginMessage.message, { variant: 'success' })
-			} else if (loginMessage.status === 'fail') {
-				enqueueSnackbar(loginMessage.message, { variant: 'error' })
-			}
-			console.log(loginMessage)
+			dispatch(registerAsync(formData))
+			enqueueSnackbar('Register Successfully!', { variant: 'success' })
+		} catch (errors) {
+			console.log('Failed to register', errors.message)
 		}
+		reset({
+			email: '',
+			password: ''
+		})
 	}
 
+	console.log(t('text.username'))
+
 	return (
-		<div className="login">
+		<div className="register">
 			<div className="container">
 				<div id="breadcum">
 					<div className="breadcum__item">
@@ -60,47 +66,51 @@ const Login = () => {
 					</div>
 
 					<div className="breadcum__item">
-						<span>Login</span>
+						<Link to="/register">Register</Link>
 					</div>
 				</div>
-				<ul className="login__text">
-					<i>- Login</i>
+				<ul className="register__text">
+					<i>- Sign Up</i>
 				</ul>
-				<h3 className="login__create">Login to Your Account</h3>
-				<div className="login__form">
+				<h3 className="register__create">Create Account</h3>
+				<div className="register__form">
 					<form onSubmit={handleSubmit(onSubmit)}>
 						<div className="form-group">
-							<label className="form-label" htmlFor="mail">
+							<label className="form-label" htmlFor="email">
 								Email Address{' '}
 							</label>
 							<InputField id="email" name="email" control={control} className="form-input" />
-						</div>
-
-						<div className="form-group">
 							<label className="form-label" htmlFor="password">
-								Password{' '}
+								Create Password{' '}
 							</label>
 							<InputField id="password" name="password" control={control} className="form-input" type="password" />
 						</div>
 
-						<label className="form-remember">
-							Remember me
-							<input type="checkbox" />
+						<InputField
+							control={control}
+							type="checkbox"
+							name="checkbox"
+							id="checkbox"
+							className="form-policy form-policy--main"
+						/>
+
+						<label className="form-policy">
+							I have read and agree to <a href="/policy">terms & conditions</a>
+							{/* <InputField type="checkbox" /> */}
+							<input
+								type="checkbox"
+								{...register('checkbox', { required: 'You must accept the terms and conditions' })}
+							/>
 							<span className="checkmark" />
 						</label>
 						<div className="form-btn">
 							<button type="submit" className="btn btn--primary">
-								Login
+								Create Account
 							</button>
-							<div className="btn-login">
-								<Link to="/register" className="btn btn--secondary">
-									Create Account
-								</Link>
 
-								<Link to="/login" className="btn btn--forgot">
-									Forgot Password?
-								</Link>
-							</div>
+							<Link to="/login" className="btn btn--secondary">
+								Login
+							</Link>
 						</div>
 					</form>
 				</div>
@@ -109,4 +119,4 @@ const Login = () => {
 	)
 }
 
-export default withLayout(requiredNoAuth(Login))
+export default withLayout(Register)

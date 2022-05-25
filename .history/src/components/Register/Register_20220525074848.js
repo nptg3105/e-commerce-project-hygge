@@ -3,7 +3,6 @@ import { useSnackbar } from 'notistack'
 import * as React from 'react'
 import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
 import * as yup from 'yup'
 import useLanguage from '../../hooks/useLanguage'
 import { registerAsync } from '../../redux/actions/auth'
@@ -61,12 +60,15 @@ const Register = () => {
 			<div className="container">
 				<div id="breadcum">
 					<div className="breadcum__item">
-						<Link to="/">Home Page</Link>
+						<a href="/">Home Page</a>
 						<i className="fa-solid fa-angle-right" />
 					</div>
-
 					<div className="breadcum__item">
-						<span>Register</span>
+						<a href="/">Categories</a>
+						<i className="fa-solid fa-angle-right" />
+					</div>
+					<div className="breadcum__item">
+						<a href="/">Sign Up</a>
 					</div>
 				</div>
 				<ul className="register__text">
@@ -108,9 +110,9 @@ const Register = () => {
 								Create Account
 							</button>
 
-							<Link to="/login" className="btn btn--secondary">
+							<a href="/login" className="btn btn--secondary">
 								Login
-							</Link>
+							</a>
 						</div>
 					</form>
 				</div>

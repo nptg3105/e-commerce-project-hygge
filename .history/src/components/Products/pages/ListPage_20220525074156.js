@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import productsAPI from '../../../services/productsAPI'
 import Newsletter from '../../Newsletter/Newsletter'
 import withLayout from '../../withLayout'
@@ -35,11 +34,15 @@ const ListPage = () => {
 			<div className="container">
 				<div id="breadcum">
 					<div className="breadcum__item">
-						<Link to="/">Home Page</Link>
+						<a href="/">Home Page</a>
 						<i className="fa-solid fa-angle-right" />
 					</div>
 					<div className="breadcum__item">
-						<Link to="/products">Products</Link>
+						<a href="/">Navigation</a>
+						<i className="fa-solid fa-angle-right" />
+					</div>
+					<div className="breadcum__item">
+						<Link to="/products">Products</Li>
 					</div>
 				</div>
 				<ul className="login__text">

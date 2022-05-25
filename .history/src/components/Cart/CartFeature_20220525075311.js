@@ -1,6 +1,6 @@
+/*eslint-disable */
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { formatVND } from '../../utils/formatCurrency'
 import Newsletter from '../Newsletter/Newsletter'
 import withLayout from '../withLayout'
@@ -18,7 +18,7 @@ const CartFeature = () => {
 			<div className="container">
 				<div id="breadcum">
 					<div className="breadcum__item">
-						<Link to="/">Home Page</Link>
+						<a href="/">Home Page</a>
 						<i className="fa-solid fa-angle-right" />
 					</div>
 					<div className="breadcum__item">
@@ -26,7 +26,7 @@ const CartFeature = () => {
 						<i className="fa-solid fa-angle-right" />
 					</div>
 					<div className="breadcum__item">
-						<span>Shopping Cart</span>
+						<a href="/">Shopping Cart</a>
 					</div>
 				</div>
 				<div className="cart__head">
@@ -49,16 +49,14 @@ const CartFeature = () => {
 							<h3 className="cart__category">Cart Total</h3>
 							<p className="cart__line">
 								<p className="cart__text">Shipping:</p>
-								<p className="cart__text" />
+								<p className="cart__text"></p>
 							</p>
 							<p className="cart__line cart__line--total">
 								<h4 className="cart__text">Total:</h4>
 								<h4 className="cart__text">{formatVND(cartTolal)}</h4>
 							</p>
 						</div>
-						<Link to="/checkout" className="btn btn--primary cart__checkout-btn">
-							Checkout
-						</Link>
+						<a className="btn btn--primary cart__checkout-btn">Checkout</a>
 					</div>
 				</div>
 

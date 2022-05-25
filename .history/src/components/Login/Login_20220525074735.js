@@ -60,7 +60,7 @@ const Login = () => {
 					</div>
 
 					<div className="breadcum__item">
-						<span>Login</span>
+						<a href="/">Login</a>
 					</div>
 				</div>
 				<ul className="login__text">
@@ -93,13 +93,13 @@ const Login = () => {
 								Login
 							</button>
 							<div className="btn-login">
-								<Link to="/register" className="btn btn--secondary">
+								<a href="/register" className="btn btn--secondary">
 									Create Account
-								</Link>
+								</a>
 
-								<Link to="/login" className="btn btn--forgot">
+								<a href="/login" className="btn btn--forgot">
 									Forgot Password?
-								</Link>
+								</a>
 							</div>
 						</div>
 					</form>

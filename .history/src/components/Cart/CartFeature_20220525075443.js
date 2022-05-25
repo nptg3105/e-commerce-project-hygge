@@ -26,7 +26,7 @@ const CartFeature = () => {
 						<i className="fa-solid fa-angle-right" />
 					</div>
 					<div className="breadcum__item">
-						<span>Shopping Cart</span>
+						<a href="/">Shopping Cart</a>
 					</div>
 				</div>
 				<div className="cart__head">
