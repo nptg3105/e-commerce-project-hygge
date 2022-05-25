@@ -222,6 +222,8 @@
 			}
 
 			&__item {
+				display: flex;
+				justify-content: center;
 				&--1 {
 					flex: 0 0 calc(66.666% - 20px);
 					width: calc(66.666% - 20px);

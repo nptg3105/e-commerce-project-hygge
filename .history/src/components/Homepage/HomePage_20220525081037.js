@@ -74,8 +74,8 @@ const Homepage = () => {
 				</div>
 			</section>
 
-			<section className="section-category mb-112 ">
-				<div className="container category ">
+			<section className="section-category mb-112">
+				<div className="container category">
 					<i className="sub-heading">- The Categories</i>
 					<h2 className="main-heading">Browse by Category</h2>
 
@@ -155,7 +155,7 @@ const Homepage = () => {
 				</div>
 			</section>
 
-			<section className="section-product-newest mb-112">
+			<section className="section-product-newest">
 				<div className="container product-newest">
 					<p className="sub-heading">- Our Products</p>
 					<h2 className="main-heading">Explore our Products</h2>
@@ -168,7 +168,7 @@ const Homepage = () => {
 				</div>
 			</section>
 
-			<section className="section-about mb-112">
+			<section className="section-about">
 				<div className="container about">
 					<p className="sub-heading center">- Why Us</p>
 					<h2 className="main-heading center">Why People Choose Us</h2>
@@ -200,7 +200,7 @@ const Homepage = () => {
 				</div>
 			</section>
 
-			<section className="section-review mb-112">
+			<section className="section-review">
 				<div className="container review">
 					<div className="review__banner">
 						<div className="review__details">
@@ -220,7 +220,7 @@ const Homepage = () => {
 				</div>
 			</section>
 
-			<section className="section-blog mb-112">
+			<section className="section-blog">
 				<div className="container blog">
 					<p className="sub-heading">- Our Blog</p>
 					<h2 className="main-heading">Check Out our Blog</h2>

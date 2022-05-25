@@ -2,7 +2,7 @@
 @use './color';
 @use './base';
 @use './font';
-@use './function' as *;
+@use './function';
 
 * {
 	box-sizing: border-box;
@@ -14,16 +14,8 @@
 	padding: 70px 0;
 }
 
-.mb-112 {
-	margin-bottom: rem(100);
-}
-
 h2 {
 	font-weight: 500;
-}
-
-.center {
-	text-align: center;
 }
 
 .main-heading {

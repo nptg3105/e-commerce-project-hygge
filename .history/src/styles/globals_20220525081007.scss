@@ -2,7 +2,7 @@
 @use './color';
 @use './base';
 @use './font';
-@use './function' as *;
+@use './function';
 
 * {
 	box-sizing: border-box;
@@ -15,7 +15,7 @@
 }
 
 .mb-112 {
-	margin-bottom: rem(100);
+	margin-bottom: rem(112);
 }
 
 h2 {

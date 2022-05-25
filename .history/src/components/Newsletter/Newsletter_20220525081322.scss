@@ -6,8 +6,11 @@
 		padding: rem(50);
 		border-radius: rem(50);
 
+		&__sub,
+		&__heading,
 		&__form {
 			text-align: center;
+			font-family: 'Montserrat', sans-serif;
 		}
 
 		&__input {

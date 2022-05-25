@@ -89,6 +89,8 @@
 	}
 
 	.section-product-newest {
+		margin-bottom: rem(112);
+
 		.product-newest {
 			&__btn {
 				text-align: center;
@@ -102,6 +104,7 @@
 	}
 
 	.section-about {
+		margin-bottom: rem(112);
 		.about {
 			&__content {
 				display: flex;
@@ -130,6 +133,7 @@
 	}
 
 	.section-review {
+		margin-bottom: rem(112);
 		.review {
 			&__banner {
 				background-color: var(--color-light-grey);
@@ -214,6 +218,8 @@
 	}
 
 	.section-blog {
+		margin-bottom: rem(112);
+
 		.blog {
 			&__box {
 				display: flex;
@@ -222,6 +228,8 @@
 			}
 
 			&__item {
+				// margin: rem(64) rem(28) 0;
+
 				&--1 {
 					flex: 0 0 calc(66.666% - 20px);
 					width: calc(66.666% - 20px);

@@ -200,7 +200,7 @@ const Homepage = () => {
 				</div>
 			</section>
 
-			<section className="section-review mb-112">
+			<section className="section-review">
 				<div className="container review">
 					<div className="review__banner">
 						<div className="review__details">
@@ -220,7 +220,7 @@ const Homepage = () => {
 				</div>
 			</section>
 
-			<section className="section-blog mb-112">
+			<section className="section-blog">
 				<div className="container blog">
 					<p className="sub-heading">- Our Blog</p>
 					<h2 className="main-heading">Check Out our Blog</h2>

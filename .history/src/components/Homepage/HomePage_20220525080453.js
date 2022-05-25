@@ -57,12 +57,12 @@ const Homepage = () => {
 
 	return (
 		<section className="main">
-			<section className="section-hero mb-112">
+			<section className="section-hero">
 				<div className="container hero">
 					<div className="hero__banner">
 						<div className="hero__details">
 							<i className="sub-heading">- Skincare Products</i>
-							<h2 className="main-heading">We Offer the Best Products for your Skin</h2>
+							<h2 className="hero__title">We Offer the Best Products for your Skin</h2>
 							<Link to="/products" className="btn btn--primary">
 								Shop Now
 							</Link>
@@ -74,10 +74,10 @@ const Homepage = () => {
 				</div>
 			</section>
 
-			<section className="section-category mb-112 ">
-				<div className="container category ">
+			<section className="section-category">
+				<div className="container category">
 					<i className="sub-heading">- The Categories</i>
-					<h2 className="main-heading">Browse by Category</h2>
+					<h2 className="category__title heading-primary">Browse by Category</h2>
 
 					<Carousel pagination={false} breakPoints={breakPoints}>
 						<div className="category__item">
@@ -155,10 +155,10 @@ const Homepage = () => {
 				</div>
 			</section>
 
-			<section className="section-product-newest mb-112">
+			<section className="section-product-newest">
 				<div className="container product-newest">
 					<p className="sub-heading">- Our Products</p>
-					<h2 className="main-heading">Explore our Products</h2>
+					<h2 className="heading-primary">Explore our Products</h2>
 					{loading ? <ProductSkeletonList /> : <ProductList productList={productLists} />}
 					<div className="product-newest__btn">
 						<Link to="/products" className="btn btn--primary btn-product">
@@ -168,10 +168,10 @@ const Homepage = () => {
 				</div>
 			</section>
 
-			<section className="section-about mb-112">
+			<section className="section-about">
 				<div className="container about">
-					<p className="sub-heading center">- Why Us</p>
-					<h2 className="main-heading center">Why People Choose Us</h2>
+					<p className="sub-heading about__sub">- Why Us</p>
+					<h2 className="heading-primary about__heading">Why People Choose Us</h2>
 					<div className="about__content">
 						<div className="about__item">
 							<div className="about__icon">
@@ -200,12 +200,12 @@ const Homepage = () => {
 				</div>
 			</section>
 
-			<section className="section-review mb-112">
+			<section className="section-review">
 				<div className="container review">
 					<div className="review__banner">
 						<div className="review__details">
 							<i className="sub-heading ">- Our Reviews</i>
-							<h2 className="main-heading">What our Customers are Saying</h2>
+							<h2 className="review__title">What our Customers are Saying</h2>
 						</div>
 						<div className="review__text">
 							<Carousel breakPoints={breakPointsReview}>
@@ -220,10 +220,10 @@ const Homepage = () => {
 				</div>
 			</section>
 
-			<section className="section-blog mb-112">
+			<section className="section-blog">
 				<div className="container blog">
 					<p className="sub-heading">- Our Blog</p>
-					<h2 className="main-heading">Check Out our Blog</h2>
+					<h2 className="heading-primary">Check Out our Blog</h2>
 					<div className="blog__box">
 						<div className="blog__item blog__item--1">
 							<div className="blog__photo">

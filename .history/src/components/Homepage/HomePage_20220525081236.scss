@@ -222,6 +222,8 @@
 			}
 
 			&__item {
+				// margin: rem(64) rem(28) 0;
+
 				&--1 {
 					flex: 0 0 calc(66.666% - 20px);
 					width: calc(66.666% - 20px);

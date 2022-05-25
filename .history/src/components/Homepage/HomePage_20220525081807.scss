@@ -222,6 +222,11 @@
 			}
 
 			&__item {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: flex-start;
+
 				&--1 {
 					flex: 0 0 calc(66.666% - 20px);
 					width: calc(66.666% - 20px);
@@ -273,6 +278,7 @@
 			&__title {
 				font-size: rem(24);
 				margin-bottom: rem(16);
+				height: rem(70);
 			}
 
 			&__label {
