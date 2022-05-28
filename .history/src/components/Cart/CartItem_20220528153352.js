@@ -12,7 +12,7 @@ import { removeFromCart } from './CartSlice'
 
 const CartItem = ({ product }) => {
 	const dispatch = useDispatch()
-	console.log(product)
+
 	const schema = yup.object().shape({
 		quantity: yup
 			.number()

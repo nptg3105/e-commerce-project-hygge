@@ -12,7 +12,7 @@ import { removeFromCart } from './CartSlice'
 
 const CartItem = ({ product }) => {
 	const dispatch = useDispatch()
-	console.log(product)
+
 	const schema = yup.object().shape({
 		quantity: yup
 			.number()
@@ -29,7 +29,10 @@ const CartItem = ({ product }) => {
 	})
 
 	const handleDeleteItem = () => {
-		const action = removeFromCart(product.id)
+		const action = removeFromCart({
+			product,
+			id: product.product.id
+		})
 		console.log(action)
 		dispatch(action)
 	}
@@ -61,7 +64,7 @@ const CartItem = ({ product }) => {
 						<button
 							type="button"
 							onClick={() => {
-								handleDeleteItem()
+								handleDeleteItem({ product, quantity })
 							}}
 							className="cart__delete"
 						>

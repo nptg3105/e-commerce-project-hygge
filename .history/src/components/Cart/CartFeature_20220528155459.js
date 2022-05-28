@@ -6,7 +6,6 @@ import Newsletter from '../Newsletter/Newsletter'
 import withLayout from '../withLayout'
 import './Cart.scss'
 import CartItem from './CartItem'
-import { removeAllItem } from './CartSlice'
 import { cartTotalSelector } from './selector'
 
 const CartFeature = () => {
@@ -37,15 +36,9 @@ const CartFeature = () => {
 						<i className="sub-heading">- Your Cart</i>
 						<h2 className="main-heading">Shopping Cart</h2>
 					</div>
-					<button
-						type="button"
-						onClick={() => {
-							dispatch(removeAllItem())
-						}}
-						className="btn__cart btn btn--secondary"
-					>
+					<Link to="/cart" className="btn__cart btn btn--secondary">
 						Clear All
-					</button>
+					</Link>
 				</div>
 				<div className="cart__list">
 					<div className="cart__items">

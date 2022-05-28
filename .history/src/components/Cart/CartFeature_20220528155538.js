@@ -6,7 +6,6 @@ import Newsletter from '../Newsletter/Newsletter'
 import withLayout from '../withLayout'
 import './Cart.scss'
 import CartItem from './CartItem'
-import { removeAllItem } from './CartSlice'
 import { cartTotalSelector } from './selector'
 
 const CartFeature = () => {
@@ -40,7 +39,7 @@ const CartFeature = () => {
 					<button
 						type="button"
 						onClick={() => {
-							dispatch(removeAllItem())
+							removeAllItem()
 						}}
 						className="btn__cart btn btn--secondary"
 					>

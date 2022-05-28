@@ -29,7 +29,9 @@ const CartItem = ({ product }) => {
 	})
 
 	const handleDeleteItem = () => {
-		const action = removeFromCart(product.id)
+		const action = removeFromCart({
+			id: product.id
+		})
 		console.log(action)
 		dispatch(action)
 	}

@@ -8,11 +8,10 @@ import * as yup from 'yup'
 import { formatVND } from '../../utils/formatCurrency'
 import QuantityField from '../FormControls/QuantityField'
 import './Cart.scss'
-import { removeFromCart } from './CartSlice'
 
 const CartItem = ({ product }) => {
 	const dispatch = useDispatch()
-	console.log(product)
+
 	const schema = yup.object().shape({
 		quantity: yup
 			.number()
@@ -27,12 +26,6 @@ const CartItem = ({ product }) => {
 		},
 		resolver: yupResolver(schema)
 	})
-
-	const handleDeleteItem = () => {
-		const action = removeFromCart(product.id)
-		console.log(action)
-		dispatch(action)
-	}
 
 	return (
 		<div>
@@ -58,15 +51,9 @@ const CartItem = ({ product }) => {
 							control={control}
 							className="form-quantity cart__quantity"
 						/>
-						<button
-							type="button"
-							onClick={() => {
-								handleDeleteItem()
-							}}
-							className="cart__delete"
-						>
+						<a href="/" className="cart__delete">
 							<CloseIcon />
-						</button>
+						</a>
 					</div>
 				</div>
 			</div>
