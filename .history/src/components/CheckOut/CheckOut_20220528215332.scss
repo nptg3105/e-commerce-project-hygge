@@ -1,0 +1,22 @@
+@import '../../styles/index';
+
+.checkout {
+	&__detail {
+		width: 50%;
+		border: 2px solid var(--color-light-grey);
+		padding: rem(20);
+		border-radius: rem(20);
+		h2 {
+			font-size: rem(40);
+		}
+
+		.form-btn {
+			flex-direction: column;
+			gap: rem(20);
+
+			.btn {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

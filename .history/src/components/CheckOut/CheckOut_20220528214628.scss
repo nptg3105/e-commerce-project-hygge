@@ -1,0 +1,9 @@
+@import '../../styles/index';
+
+.checkout {
+	&__detail {
+		width: 50%;
+		border: 2px solid var(--color-light-grey);
+		padding: rem(20);
+	}
+}

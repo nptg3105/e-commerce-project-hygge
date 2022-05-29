@@ -1,0 +1,61 @@
+@import '../../styles/index';
+
+.checkout {
+	&__box {
+		display: flex;
+		justify-content: center;
+		// align-items: center;
+		gap: rem(20);
+	}
+
+	&__detail {
+		width: 60%;
+		border: 2px solid var(--color-light-grey);
+		padding: rem(30);
+		border-radius: rem(20);
+		h2 {
+			font-size: rem(40);
+			margin-bottom: rem(20);
+		}
+
+		.form-btn {
+			flex-direction: column;
+			gap: rem(20);
+
+			.btn {
+				margin-bottom: 0;
+
+				&--primary {
+					margin-top: rem(20);
+				}
+			}
+		}
+	}
+
+	&__cart {
+		width: 50%;
+		border: 2px solid var(--color-light-grey);
+		padding: rem(30);
+		border-radius: rem(20);
+
+		h2 {
+			font-size: rem(40);
+			margin-bottom: rem(20);
+		}
+
+		.basket {
+			display: flex;
+
+			&__img {
+				width: rem(100);
+				height: rem(100);
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+	}
+}

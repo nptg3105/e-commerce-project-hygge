@@ -1,0 +1,132 @@
+@import '../../styles/index';
+
+.cart {
+	&__head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__list {
+		display: flex;
+		gap: rem(30);
+		justify-content: space-between;
+	}
+
+	&__item,
+	&__checkout {
+		border: 2px solid var(--color-light-grey);
+		border-radius: rem(20);
+		padding: rem(20);
+		margin-bottom: rem(30);
+	}
+
+	&__item {
+		display: flex;
+		gap: rem(50);
+		// width: calc(100% - 50px);
+	}
+
+	&__img {
+		width: rem(150);
+		height: rem(150);
+		overflow: hidden;
+		img {
+			border-radius: rem(20);
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__details {
+		width: calc(100% - 200px);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__control {
+		display: flex;
+		align-items: center;
+		margin-top: rem(10);
+	}
+
+	&__delete {
+		margin-left: rem(20);
+		border: 2px solid var(--color-light-grey);
+		padding: rem(10);
+		border-radius: 50%;
+		cursor: pointer;
+		display: flex;
+		transition: 0.25s;
+		background-color: var(--color-white);
+	}
+
+	&__delete:hover {
+		border: 2px solid var(--color-black);
+	}
+
+	&__checkout {
+		width: calc(50% - 50px);
+		display: flex;
+		flex-direction: column;
+		// align-items: stretch;
+		justify-content: space-between;
+	}
+
+	&__category {
+		font-size: rem(34);
+		margin-bottom: rem(50);
+	}
+
+	&__line {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: rem(30);
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50%;
+	}
+}
+
+@media (max-width: $sm-min) {
+	.cart {
+		&__list {
+			flex-direction: column;
+		}
+
+		&__checkout {
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: $xxs-min) {
+	.cart {
+		&__head {
+			flex-direction: column;
+			align-items: flex-start;
+			margin-bottom: rem(20);
+		}
+
+		&__item {
+			flex-direction: column;
+			gap: rem(15);
+			align-items: center;
+		}
+
+		&__details {
+			width: 100%;
+			align-items: center;
+		}
+
+		&__product {
+			text-align: center;
+		}
+	}
+}
