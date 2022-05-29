@@ -130,61 +130,36 @@ const Checkout = () => {
 									<label className="form-label" htmlFor="fullname">
 										Fullname{' '}
 									</label>
-									<InputField required id="fullname" name="fullname" control={control} className="form-input" />
+									<InputField id="fullname" name="fullname" control={control} className="form-input" />
 								</div>
 								<div className="form-group">
 									<label className="form-label" htmlFor="phone">
 										Phone Number{' '}
 									</label>
-									<InputField required id="phone" name="phone" control={control} className="form-input" />
-								</div>
-								<div className="form-group">
-									<label className="form-label" htmlFor="mail">
-										Email Address{' '}
-									</label>
-									<InputField required id="email" name="email" control={control} className="form-input" />
+									<InputField id="phone" name="phone" control={control} className="form-input" />
 								</div>
 								<div className="form-group">
 									<label className="form-label" htmlFor="city">
 										City{' '}
 									</label>
-									<InputField required id="city" name="city" control={control} className="form-input" />
+									<InputField id="city" name="city" control={control} className="form-input" />
 								</div>
 								<div className="form-group">
-									<label className="form-label" htmlFor="district">
-										District{' '}
+									<label className="form-label" htmlFor="mail">
+										Email Address{' '}
 									</label>
-									<InputField required id="district" name="district" control={control} className="form-input" />
+									<InputField id="email" name="email" control={control} className="form-input" />
 								</div>
-								<div className="form-group">
-									<label className="form-label" htmlFor="ward">
-										Ward{' '}
-									</label>
-									<InputField required id="ward" name="ward" control={control} className="form-input" />
-								</div>
-								<div className="form-group">
-									<label className="form-label" htmlFor="address">
-										Address{' '}
-									</label>
-									<InputField
-										required
-										type="textarea"
-										id="address"
-										name="address"
-										control={control}
-										className="form-input"
-									/>
-								</div>
-								<label className="form-remember">
-									Set as default Address
-									<input type="checkbox" />
-									<span className="checkmark" />
-								</label>
 
 								<div className="form-btn">
-									<button to="/place-order" type="submit" className="btn btn--primary btn--full">
-										Place Order
+									<button type="submit" className="btn btn--primary btn--full">
+										Login
 									</button>
+									<div className="btn-login ">
+										<Link to="/register" className="btn btn--secondary btn--full">
+											Guest Checkout
+										</Link>
+									</div>
 								</div>
 							</form>
 						</div>

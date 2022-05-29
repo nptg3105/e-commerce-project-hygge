@@ -4,7 +4,6 @@
 	.login__form {
 		margin: 0;
 		max-width: none;
-		padding-bottom: 0;
 	}
 
 	&__box {
@@ -59,8 +58,8 @@
 			}
 
 			&__img {
-				width: rem(200);
-				height: rem(200);
+				width: rem(150);
+				height: rem(100);
 
 				img {
 					width: 100%;
