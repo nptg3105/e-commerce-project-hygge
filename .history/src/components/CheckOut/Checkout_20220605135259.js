@@ -28,7 +28,7 @@ const Checkout = () => {
 
 	const schema = yup.object().shape({
 		email: yup.string().required('Please enter your email.').email('Please enter a valid email!'),
-		fullname: yup.string().required('Please enter your name').min(2, 'Please enter at least 2 characters.'),
+		fullname: yup.string().required('Please enter your name').min(2, 'Please enter at least 2 characters.')
 		phone: yup.number().required('Please enter your phone'),
 		city: yup.string().required('Please fill your city'),
 		district: yup.string().required('Please enter your district'),

@@ -198,6 +198,7 @@
 		}
 
 		.section-review {
+			margin-bottom: 0;
 			.review {
 				&__banner {
 					background-color: var(--color-white);
@@ -242,6 +243,14 @@
 		&__cart {
 			flex-direction: column-reverse;
 			align-items: flex-start;
+		}
+
+		.section-review {
+			.review {
+				&__box {
+					padding: 0;
+				}
+			}
 		}
 	}
 }

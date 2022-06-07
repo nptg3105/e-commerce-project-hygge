@@ -106,10 +106,6 @@
 		cursor: pointer;
 	}
 
-	&__icon-heart--active {
-		color: var(--color-error);
-	}
-
 	&__icon-heart {
 		line-height: 100%;
 	}
@@ -198,6 +194,7 @@
 		}
 
 		.section-review {
+			margin-bottom: 0;
 			.review {
 				&__banner {
 					background-color: var(--color-white);
@@ -228,20 +225,7 @@
 		&__sale {
 			flex-direction: column;
 			align-items: flex-start;
-		}
-
-		&__category {
-			margin-bottom: rem(10);
-		}
-
-		&__price,
-		&__icon {
-			margin-left: rem(5);
-		}
-
-		&__cart {
-			flex-direction: column-reverse;
-			align-items: flex-start;
+			justify-content: flex-start;
 		}
 	}
 }

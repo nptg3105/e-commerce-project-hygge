@@ -427,7 +427,7 @@
 	}
 }
 
-@media (max-width: $xxs-max) {
+@media (max-width: $xxs-min) {
 	.main {
 		.section-blog {
 			margin-bottom: 0;
@@ -468,15 +468,6 @@
 						flex: 0 0 100%;
 						width: 100%;
 					}
-				}
-			}
-		}
-
-		.section-review {
-			.review {
-				&__box {
-					padding: 0;
-					padding-bottom: rem(15);
 				}
 			}
 		}

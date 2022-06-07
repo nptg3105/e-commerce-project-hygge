@@ -146,6 +146,10 @@
 			font-weight: 700;
 		}
 
+		&__box {
+			padding: rem(20);
+		}
+
 		&__img {
 			margin-bottom: rem(32);
 			outline-offset: 8px;
