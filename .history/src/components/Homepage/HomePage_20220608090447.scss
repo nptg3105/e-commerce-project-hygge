@@ -206,8 +206,7 @@
 			&__box {
 				display: flex;
 				flex-wrap: wrap;
-				justify-content: space-between;
-				row-gap: rem(35);
+				gap: rem(20);
 			}
 
 			&__item {
@@ -250,14 +249,13 @@
 			&__photo {
 				overflow: hidden;
 				margin-bottom: rem(20);
-				height: 40vh;
+				object-fit: cover;
 			}
 
 			&__img {
 				border-radius: rem(50);
 				width: 100%;
 				height: 100%;
-				object-fit: cover;
 			}
 
 			&__title {

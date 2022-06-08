@@ -275,7 +275,7 @@ const Homepage = () => {
 
 						<div className="blog__item blog__item--7">
 							<div className="blog__photo">
-								<img className="blog__img" src="images/blog7.jpg" alt="blog-photo7" />
+								<img className="blog__img" src="images/blog-pic-7.jpg" alt="blog-photo7" />
 							</div>
 							<h3 className="blog__title">5 Great Tips to Get that Perfect Skin</h3>
 							<span className="blog__label blog__label--pink">Top Tips</span>

@@ -206,7 +206,7 @@
 			&__box {
 				display: flex;
 				flex-wrap: wrap;
-				justify-content: space-between;
+				column-gap: rem(20);
 				row-gap: rem(35);
 			}
 
@@ -257,7 +257,9 @@
 				border-radius: rem(50);
 				width: 100%;
 				height: 100%;
-				object-fit: cover;
+				img {
+					object-fit: cover;
+				}
 			}
 
 			&__title {

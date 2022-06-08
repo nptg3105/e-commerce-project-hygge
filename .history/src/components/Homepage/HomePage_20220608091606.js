@@ -243,7 +243,7 @@ const Homepage = () => {
 
 						<div className="blog__item blog__item--3">
 							<div className="blog__photo">
-								<img className="blog__img" src="images/blog3.jpg" alt="blog-photo3" />
+								<img className="blog__img" src="images/blog-pic-3.jpg" alt="blog-photo3" />
 							</div>
 							<h3 className="blog__title">Always Stay Fresh</h3>
 							<span className="blog__label blog__label--pink">How to</span>
@@ -251,7 +251,7 @@ const Homepage = () => {
 
 						<div className="blog__item blog__item--4">
 							<div className="blog__photo">
-								<img className="blog__img" src="images/blog4.jpg" alt="blog-photo4" />
+								<img className="blog__img" src="images/blog-pic-4.jpg" alt="blog-photo4" />
 							</div>
 							<h3 className="blog__title">Improve your Skin now</h3>
 							<span className="blog__label blog__label--green">Mask</span>
@@ -259,7 +259,7 @@ const Homepage = () => {
 
 						<div className="blog__item blog__item--5">
 							<div className="blog__photo">
-								<img className="blog__img" src="images/blog5.jpg" alt="blog-photo5" />
+								<img className="blog__img" src="images/blog-pic-5.jpg" alt="blog-photo5" />
 							</div>
 							<h3 className="blog__title">Stay Safe in the Sun</h3>
 							<span className="blog__label blog__label--orange">Sun Care</span>
@@ -267,7 +267,7 @@ const Homepage = () => {
 
 						<div className="blog__item blog__item--6">
 							<div className="blog__photo">
-								<img className="blog__img" src="images/blog6.jpg" alt="blog-photo6" />
+								<img className="blog__img" src="images/blog-pic-6.jpg" alt="blog-photo6" />
 							</div>
 							<h3 className="blog__title">Explore our Bestselling Products</h3>
 							<span className="blog__label blog__label--blue">BESTSELLERS</span>
@@ -275,7 +275,7 @@ const Homepage = () => {
 
 						<div className="blog__item blog__item--7">
 							<div className="blog__photo">
-								<img className="blog__img" src="images/blog7.jpg" alt="blog-photo7" />
+								<img className="blog__img" src="images/blog-pic-7.jpg" alt="blog-photo7" />
 							</div>
 							<h3 className="blog__title">5 Great Tips to Get that Perfect Skin</h3>
 							<span className="blog__label blog__label--pink">Top Tips</span>

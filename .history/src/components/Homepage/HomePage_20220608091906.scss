@@ -207,13 +207,14 @@
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: space-between;
+				// column-gap: rem(20);
 				row-gap: rem(35);
 			}
 
 			&__item {
 				&--1 {
-					flex: 0 0 calc(66.666% - 20px);
-					width: calc(66.666% - 20px);
+					flex: 0 0 calc(66.7% - 20px);
+					width: calc(66.7% - 20px);
 				}
 
 				&--2 {
