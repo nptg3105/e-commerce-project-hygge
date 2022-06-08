@@ -1,0 +1,17 @@
+@import '../../styles//index';
+
+.contact {
+	&__item {
+		h3 {
+			font-size: rem(24);
+		}
+
+		p {
+			font-size: rem(18);
+		}
+
+		a {
+			text-decoration: underline;
+		}
+	}
+}

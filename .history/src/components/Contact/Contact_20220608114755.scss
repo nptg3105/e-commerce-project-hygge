@@ -1,0 +1,24 @@
+@import '../../styles//index';
+
+.contact {
+	&__infor {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto;
+		gap: rem(50);
+	}
+	&__item {
+		h3 {
+			font-size: rem(24);
+		}
+
+		p {
+			font-size: rem(18);
+		}
+
+		a {
+			text-decoration: underline;
+			font-weight: 600;
+		}
+	}
+}
