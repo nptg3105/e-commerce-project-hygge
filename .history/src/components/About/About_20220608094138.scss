@@ -1,0 +1,17 @@
+@import '../../styles/index';
+
+.about {
+	&__heading {
+		margin-bottom: rem(70);
+	}
+	&__image {
+		width: 100%;
+		border-radius: rem(50);
+		object-fit: cover;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+	}
+}

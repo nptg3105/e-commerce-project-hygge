@@ -42,7 +42,7 @@ const routes = [
 	{
 		path: 'place-order-success',
 		element: <PlaceOrder />
-	},
+	,}
 	{
 		path: 'about',
 		element: <About />

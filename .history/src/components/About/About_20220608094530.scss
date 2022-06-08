@@ -1,0 +1,30 @@
+@import '../../styles/index';
+
+.about {
+	&__image {
+		width: 100%;
+		border-radius: rem(50);
+		object-fit: cover;
+	}
+
+	&__content {
+		display: flex;
+		gap: rem(50);
+	}
+
+	&__title {
+		position: relative;
+		margin-bottom: rem(32);
+		padding-left: rem(32);
+		font-size: rem(24);
+		line-height: 1.7;
+		font-weight: 600;
+		color: var(--color-primary);
+	}
+
+	&__paragh {
+		padding-left: 32px;
+		font-size: 24px;
+		line-height: 2;
+	}
+}

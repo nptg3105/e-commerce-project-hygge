@@ -1,0 +1,16 @@
+@import '../../styles/index';
+
+.about {
+	&__image {
+		width: 100%;
+		border-radius: rem(50);
+		height: 100%;
+		img {
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		display: flex;
+	}
+}

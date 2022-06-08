@@ -1,0 +1,45 @@
+@import '../../styles/index';
+
+.about {
+	&__image {
+		width: 100%;
+		border-radius: rem(50);
+		object-fit: cover;
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+	}
+
+	&__text {
+		padding-left: rem(60);
+	}
+
+	&__title {
+		position: relative;
+		margin-bottom: rem(32);
+		padding-left: rem(32);
+		font-size: rem(24);
+		line-height: 1.7;
+		font-weight: 600;
+		color: var(--color-primary);
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: rem(16);
+			left: 0;
+			width: rem(8);
+			height: rem(8);
+			border-radius: 50%;
+			background: var(--color-primary);
+		}
+	}
+
+	&__paragh {
+		padding-left: rem(32);
+		font-size: rem(24);
+		line-height: 2;
+	}
+}
