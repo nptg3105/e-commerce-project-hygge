@@ -1,0 +1,21 @@
+@import '../../styles/index';
+
+.place-order {
+	background-color: var(--color-light-grey);
+	border-radius: rem(10);
+	padding: rem(30);
+	text-align: center;
+	h2,
+	.icon {
+		font-size: rem(50);
+		color: var(--color-primary);
+	}
+
+	h3 {
+		font-size: rem(30);
+	}
+
+	&__btn {
+		width: 50%;
+	}
+}

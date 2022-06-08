@@ -1,0 +1,36 @@
+@import '../../styles/index';
+
+.place-order {
+	background-color: var(--color-light-grey);
+	border-radius: rem(10);
+	padding: rem(30);
+	text-align: center;
+	h2,
+	.icon {
+		font-size: rem(50);
+		color: var(--color-primary);
+	}
+
+	h3 {
+		font-size: rem(30);
+	}
+
+	&__btn {
+		width: 90%;
+		gap: rem(20);
+		margin: auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: rem(20);
+	}
+}
+
+@media (max-width: $xs-max) {
+	.place-order {
+		&__btn {
+			flex-direction: column;
+			width: 100%;
+		}
+	}
+}
