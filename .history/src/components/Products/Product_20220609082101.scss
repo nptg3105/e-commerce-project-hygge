@@ -1,6 +1,6 @@
 @import '../../styles/index';
 
-.product {
+.products {
 	font-family: 'Montserrat', sans-serif;
 
 	&_list {
@@ -117,9 +117,7 @@
 		display: flex;
 		gap: 20px;
 	}
-}
 
-.products {
 	.section-newsletter {
 		.newsletter {
 			margin-top: rem(112);

@@ -86,8 +86,6 @@
 
 	.product-newest {
 		&__btn {
-			text-align: center;
-
 			.btn--center {
 				text-align: center;
 			}
@@ -426,14 +424,6 @@
 				&__image {
 					background-color: var(--color-light-grey);
 					border-radius: rem(50);
-				}
-			}
-		}
-
-		.product-newest {
-			&__btn {
-				.btn--center {
-					width: 100%;
 				}
 			}
 		}
